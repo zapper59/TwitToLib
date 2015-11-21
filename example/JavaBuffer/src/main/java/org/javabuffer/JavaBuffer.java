@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 import java.util.concurrent.Executors;
 
 import javax.ws.rs.core.MediaType;
-
+import java.util.logging;
 import static java.lang.System.*;
 
 import com.sun.net.httpserver.HttpExchange;

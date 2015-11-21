@@ -1,0 +1,1688 @@
+2015-04-28 03:39:21.761+0000 INFO  [org.neo4j]: You are using an unsupported version of the Java runtime. Please use Oracle(R) Java(TM) Runtime Environment 7 or OpenJDK(TM) 7.
+2015-04-28 03:39:21.885+0000 INFO  [org.neo4j]: No locking implementation specified, defaulting to 'community'
+2015-04-28 03:39:21.930+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics START ---
+2015-04-28 03:39:21.931+0000 INFO  [org.neo4j]: Neo4j Kernel properties:
+    store_dir=db/data
+    ephemeral=false
+2015-04-28 03:39:21.934+0000 INFO  [org.neo4j]: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    NETWORK
+2015-04-28 03:39:21.935+0000 INFO  [org.neo4j]: System memory information:
+    Total Physical memory: 15.63 GB
+    Free Physical memory: 11.65 GB
+    Committed virtual memory: 462.95 MB
+    Total swap space: 31.27 GB
+    Free swap space: 24.92 GB
+2015-04-28 03:39:21.937+0000 INFO  [org.neo4j]: JVM memory information:
+    Free  memory: 143.31 MB
+    Total memory: 241.50 MB
+    Max   memory: 3.48 GB
+    Garbage Collector: PS Scavenge: [PS Eden Space, PS Survivor Space]
+    Garbage Collector: PS MarkSweep: [PS Eden Space, PS Survivor Space, PS Old Gen]
+    Memory Pool: Code Cache (Non-heap memory): committed=3.38 MB, used=3.36 MB, max=240.00 MB, threshold=0.00 B
+    Memory Pool: Metaspace (Non-heap memory): committed=13.13 MB, used=12.59 MB, max=-1.00 B, threshold=0.00 B
+    Memory Pool: Compressed Class Space (Non-heap memory): committed=1.88 MB, used=1.67 MB, max=1.00 GB, threshold=0.00 B
+    Memory Pool: PS Eden Space (Heap memory): committed=63.00 MB, used=63.00 MB, max=1.28 GB, threshold=?
+    Memory Pool: PS Survivor Space (Heap memory): committed=10.50 MB, used=10.48 MB, max=10.50 MB, threshold=?
+    Memory Pool: PS Old Gen (Heap memory): committed=168.00 MB, used=24.72 MB, max=2.61 GB, threshold=0.00 B
+2015-04-28 03:39:21.939+0000 INFO  [org.neo4j]: Operating system information:
+    Operating System: Windows 7; version: 6.1; arch: amd64; cpus: 8
+    Process id: 9120@BRIRICHE-WS
+    Byte order: LITTLE_ENDIAN
+    Local timezone: America/Chicago
+2015-04-28 03:39:21.941+0000 INFO  [org.neo4j]: JVM information:
+    VM Name: Java HotSpot(TM) 64-Bit Server VM
+    VM Vendor: Oracle Corporation
+    VM Version: 25.40-b25
+    JIT compiler: HotSpot 64-Bit Tiered Compilers
+    VM Arguments: [-Dfile.encoding=Cp1252]
+2015-04-28 03:39:21.942+0000 INFO  [org.neo4j]: Java classpath:
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.2/c707664e020218f8529b9a5e55016ee15f0f82ac/log4j-core-2.2.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-core/3.6.2/9ec77e2507f9cc01756964c71d91efd8154a8c47/lucene-core-3.6.2.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/localedata.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.parboiled/parboiled-scala_2.10/1.1.7/c20d486f11cc115c0df2ebc2aefb2773f9f9fb11/parboiled-scala_2.10-1.1.7.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/access-bridge-64.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-csv/2.2.1/32a972a7da50831d8a83377d7833858c9ba50d03/neo4j-csv-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-primitive-collections/2.2.1/a17b85f6714b8d6078a0213e6eda5425201c7776/neo4j-primitive-collections-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-unsafe/2.2.1/29058160d20972dc5e386d6ca21e0c29b0c05168/neo4j-unsafe-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-kernel/2.2.1/7b6aa46bf07146ea6240ff6240da9827fbdde6ca/neo4j-kernel-2.2.1.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\jsse.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\charsets.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-compiler-1.9/2.0.4/93381595ffca5c8813eb65af32a910637dc0c408/neo4j-cypher-compiler-1.9-2.0.4.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\rt.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/net.sf.opencsv/opencsv/2.3/c23708cdb9e80a144db433e23344a788a1fd6599/opencsv-2.3.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/dnsns.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.2/d7ef6ad7ff0711dd12fe409d62d72d6ed14516e0/log4j-api-2.2.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/sunec.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-udc/2.2.1/51e3e10caebe09abcfecbbefc5aa712555a69951/neo4j-udc-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/workspace/workspace/JavaBuffer/bin/
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-graph-matching/2.2.1/3c4b77b51ad58cee1278beb691bb573ccb1312b6/neo4j-graph-matching-2.2.1.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\resources.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/jfxrt.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/zipfs.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-reflect/2.10.5/7392facb48876c67a89fcb086112b195f5f6bbc3/scala-reflect-2.10.5.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\jce.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-compiler-2.0/2.0.4/13277d9b4ae208ca1145210488502a80bbf20376/neo4j-cypher-compiler-2.0-2.0.4.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/com.googlecode.concurrentlinkedhashmap/concurrentlinkedhashmap-lru/1.4/d4b42ed76a166a81dbac613339eed3343be6bd2d/concurrentlinkedhashmap-lru-1.4.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-compiler-2.1/2.1.7/599ad633a098153150640484202f7c6c5b82766c/neo4j-cypher-compiler-2.1-2.1.7.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-consistency-check/2.2.1/61618073b9ffb65898f50e4976f3dd30fc1993c8/neo4j-consistency-check-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher/2.2.1/3f73a0f935586104b7fa93f38c4311a778dfc57d/neo4j-cypher-2.2.1.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\classes
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/com.codesnippets4all/quick-json/1.0.4/d71030f64dccafcf77aefb4c85edd63716855cd0/quick-json-1.0.4.jar
+     [classpath + loader.0] file:/C:/Users/bririche/workspace/workspace/JavaBuffer/sun-httpserver/
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/sunmscapi.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/sunpkcs11.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j/2.2.1/2193d074aabc4ab871fac2282b080edaf6233cc2/neo4j-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-io/2.2.1/6af91c60951c801e396007cdd101df000d7e8e96/neo4j-io-2.2.1.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/cldrdata.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/jaccess.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\jfr.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-graph-algo/2.2.1/c4e60af0e4767905fad83d57041a9d4677e4c6de/neo4j-graph-algo-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-compiler-2.2/2.2.1/7064a853a25cf99a92f0d092e498bb3ab3141ca6/neo4j-cypher-compiler-2.2-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-jmx/2.2.1/9a8cb004784c519e6478807937d7763791915e74/neo4j-jmx-2.2.1.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/sunjce_provider.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\sunrsasign.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/nashorn.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.parboiled/parboiled-core/1.1.7/a60ff9a54cbeb30ec44c89e16ac4c35913cbad5a/parboiled-core-1.1.7.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.10.5/57ac67a6cf6fd591e235c62f8893438e8d10431d/scala-library-2.10.5.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-lucene-index/2.2.1/ab69e1387e08b533244a06b7b54593b9927929a6/neo4j-lucene-index-2.2.1.jar
+2015-04-28 03:39:21.959+0000 INFO  [org.neo4j]: Library path:
+    C:\Program Files\Java\jre1.8.0_40\bin
+    C:\Windows\Sun\Java\bin
+    C:\Windows\System32
+    C:\Windows
+    C:\Program Files\Java\jre1.8.0_40\bin\server
+    C:\Program Files\Java\jre1.8.0_40\bin
+    C:\Program Files\Java\jre1.8.0_40\lib\amd64
+    C:\ProgramData\Oracle\Java\javapath
+    C:\Program Files\md5
+    C:\Program Files\Java\jdk1.8.0_40\bin
+    C:\Windows\System32
+    C:\Windows
+    C:\Windows\System32\wbem
+    C:\Windows\System32\WindowsPowerShell\v1.0
+    C:\Windows\System32\WindowsPowerShell\v1.0
+    C:\Program Files (x86)\QuickTime\QTSystem
+    C:\Program Files (x86)\Git\cmd
+    C:\Program Files (x86)\gradle-2.1\bin
+    C:\Program Files (x86)\Skype\Phone
+    C:\Users\bririche\AppData\Local\atom\bin
+    C:\Program Files\eclipse
+    C:\Users\bririche\workspace\workspace\JavaBuffer
+    C:\Users\bririche\workspace\workspace\JavaBuffer
+2015-04-28 03:39:21.965+0000 INFO  [org.neo4j]: System.properties:
+    sun.boot.library.path = C:\Program Files\Java\jre1.8.0_40\bin
+    path.separator = ;
+    file.encoding.pkg = sun.io
+    user.country = US
+    user.script = 
+    sun.java.launcher = SUN_STANDARD
+    sun.os.patch.level = Service Pack 1
+    user.dir = C:\Users\bririche\workspace\workspace\JavaBuffer
+    user.variant = 
+    sun.jnu.encoding = Cp1252
+    sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+    user.home = C:\Users\bririche
+    user.timezone = America/Chicago
+    file.encoding = Cp1252
+    user.name = bririche
+    sun.java.command = org.javabuffer.JavaBuffer
+    sun.arch.data.model = 64
+    user.language = en
+    awt.toolkit = sun.awt.windows.WToolkit
+    file.separator = \
+    sun.io.unicode.encoding = UnicodeLittle
+    sun.cpu.endian = little
+    sun.desktop = windows
+    sun.cpu.isalist = amd64
+2015-04-28 03:39:21.966+0000 INFO  [org.neo4j]: Network information:
+    Interface Software Loopback Interface 1:
+        address: 127.0.0.1
+        address: 0:0:0:0:0:0:0:1
+    Interface WAN Miniport (SSTP):
+    Interface WAN Miniport (L2TP):
+    Interface WAN Miniport (PPTP):
+    Interface WAN Miniport (PPPOE):
+    Interface WAN Miniport (IPv6):
+    Interface WAN Miniport (Network Monitor):
+    Interface WAN Miniport (IP):
+    Interface RAS Async Adapter:
+    Interface WAN Miniport (IKEv2):
+    Interface Intel(R) Ethernet Connection I217-LM:
+        address: fe80:0:0:0:988b:b4a5:98a5:7353%eth3
+    Interface Intel(R) Dual Band Wireless-AC 7260:
+        address: 192.168.1.76
+        address: 2602:306:325c:87e0:4c5a:48e0:9e5e:7fa5
+        address: 2602:306:325c:87e0:953b:d726:dbe2:1271
+        address: fe80:0:0:0:4c5a:48e0:9e5e:7fa5%wlan0
+    Interface Bluetooth Device (RFCOMM Protocol TDI):
+    Interface Bluetooth Device (Personal Area Network):
+    Interface Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64:
+    Interface Teredo Tunneling Pseudo-Interface:
+        address: 2001:0:9d38:6ab8:2c80:28db:3f57:feb3
+        address: fe80:0:0:0:2c80:28db:3f57:feb3%net5
+    Interface VirtualBox Host-Only Ethernet Adapter:
+        address: 192.168.56.1
+        address: fe80:0:0:0:6deb:d823:6ce:aea6%eth6
+    Interface Microsoft ISATAP Adapter #2:
+        address: fe80:0:0:0:0:5efe:c0a8:3801%net6
+    Interface Intel(R) Ethernet Connection I217-LM - VirtualBox Bridged Networking Driver Miniport:
+    Interface Intel(R) Dual Band Wireless-AC 7260 - VirtualBox Bridged Networking Driver Miniport:
+    Interface VMware Virtual Ethernet Adapter for VMnet1:
+        address: 192.168.233.1
+        address: fe80:0:0:0:411a:ec0b:c323:48b2%eth9
+    Interface VMware Virtual Ethernet Adapter for VMnet8:
+        address: 192.168.111.1
+        address: fe80:0:0:0:e418:e7e2:703f:5390%eth10
+    Interface Microsoft Virtual WiFi Miniport Adapter:
+        address: fe80:0:0:0:f486:17a:792c:cd04%wlan1
+    Interface Microsoft Virtual WiFi Miniport Adapter - VirtualBox Bridged Networking Driver Miniport:
+    Interface Microsoft ISATAP Adapter #5:
+        address: fe80:0:0:0:0:5efe:c0a8:6f01%net7
+    Interface Microsoft ISATAP Adapter #7:
+    Interface Microsoft ISATAP Adapter #3:
+        address: fe80:0:0:0:0:5efe:c0a8:14c%net9
+    Interface Intel(R) Dual Band Wireless-AC 7260 - VirtualBox Bridged Networking Driver Miniport-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter #6:
+        address: fe80:0:0:0:0:5efe:c0a8:e901%net10
+    Interface Microsoft 6to4 Adapter:
+    Interface Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64 - VirtualBox Bridged Networking Driver Miniport:
+    Interface Microsoft ISATAP Adapter:
+    Interface Microsoft 6to4 Adapter-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter #2-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter #3-McAfee NDIS Light-Weight Filter-0000:
+    Interface Intel(R) Dual Band Wireless-AC 7260 - VirtualBox Bridged Networking Driver Miniport-QoS Packet Scheduler-0000:
+    Interface Microsoft ISATAP Adapter #5-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter #6-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter #7-McAfee NDIS Light-Weight Filter-0000:
+    Interface Teredo Tunneling Pseudo-Interface-McAfee NDIS Light-Weight Filter-0000:
+    Interface Intel(R) Dual Band Wireless-AC 7260-Virtual WiFi Filter Driver-0000:
+    Interface WAN Miniport (Network Monitor)-McAfee NDIS Light-Weight Filter-0000:
+    Interface WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000:
+    Interface WAN Miniport (IP)-McAfee NDIS Light-Weight Filter-0000:
+    Interface WAN Miniport (IP)-QoS Packet Scheduler-0000:
+    Interface WAN Miniport (IPv6)-McAfee NDIS Light-Weight Filter-0000:
+    Interface WAN Miniport (IPv6)-QoS Packet Scheduler-0000:
+    Interface VirtualBox Host-Only Ethernet Adapter-McAfee NDIS Light-Weight Filter-0000:
+    Interface VirtualBox Host-Only Ethernet Adapter-QoS Packet Scheduler-0000:
+    Interface VirtualBox Host-Only Ethernet Adapter-WFP LightWeight Filter-0000:
+    Interface Intel(R) Dual Band Wireless-AC 7260 - VirtualBox Bridged Networking Driver Miniport-WFP LightWeight Filter-0000:
+    Interface Microsoft Virtual WiFi Miniport Adapter - VirtualBox Bridged Networking Driver Miniport-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft Virtual WiFi Miniport Adapter - VirtualBox Bridged Networking Driver Miniport-QoS Packet Scheduler-0000:
+    Interface Intel(R) Dual Band Wireless-AC 7260-Native WiFi Filter Driver-0000:
+    Interface Microsoft Virtual WiFi Miniport Adapter - VirtualBox Bridged Networking Driver Miniport-WFP LightWeight Filter-0000:
+    Interface Intel(R) Ethernet Connection I217-LM - VirtualBox Bridged Networking Driver Miniport-McAfee NDIS Light-Weight Filter-0000:
+    Interface Intel(R) Ethernet Connection I217-LM - VirtualBox Bridged Networking Driver Miniport-QoS Packet Scheduler-0000:
+    Interface Microsoft Virtual WiFi Miniport Adapter-Native WiFi Filter Driver-0000:
+    Interface Intel(R) Ethernet Connection I217-LM - VirtualBox Bridged Networking Driver Miniport-WFP LightWeight Filter-0000:
+2015-04-28 03:39:22.199+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics END ---
+2015-04-28 03:39:22.591+0000 INFO  [org.neo4j]: Creating new db @ db\data\neostore
+2015-04-28 03:39:23.282+0000 INFO  [org.neo4j]: No lucene scan store index found, this might just be first use. Preparing to rebuild.
+2015-04-28 03:39:23.297+0000 INFO  [org.neo4j]: No lucene scan store index found, this might just be first use. Preparing to rebuild.
+2015-04-28 03:39:23.341+0000 INFO  [org.neo4j]: Opened logical log [db\data\neostore.transaction.db.0] version=0, lastTxId=1 (clean)
+2015-04-28 03:39:23.347+0000 INFO  [org.neo4j]: Missing counts store, rebuilding it.
+2015-04-28 03:39:23.435+0000 INFO  [org.neo4j]: Rebuilding lucene scan store, this may take a while
+2015-04-28 03:39:23.436+0000 INFO  [org.neo4j]: Lucene scan store rebuilt (roughly -1 nodes)
+2015-04-28 03:39:23.440+0000 INFO  [org.neo4j]: Kernel health set to OK
+2015-04-28 03:39:23.983+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions START ---
+2015-04-28 03:39:23.983+0000 INFO  [org.neo4j]: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId{creationTime=1430192362342, randomId=6264918822340514857, storeVersion=14969031248344582, upgradeTime=1430192362342, upgradeId=1}
+2015-04-28 03:39:23.984+0000 INFO  [org.neo4j]: Kernel version: Neo4j - Graph Database Kernel (neo4j-kernel), version: 2.2.1
+2015-04-28 03:39:23.984+0000 INFO  [org.neo4j]: Neo4j component versions:
+2015-04-28 03:39:23.986+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 1.9 (neo4j-cypher-compiler-1.9), version: 2.0.4; revision: 2.0.4:2.0-maint:130/4a7d10bc274a5d26a180bbe9df25100e8a694748
+2015-04-28 03:39:23.987+0000 INFO  [org.neo4j]:   Neo4j - Consistency Checker (neo4j-consistency-check), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:39:23.987+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.2 (neo4j-cypher-compiler-2.2), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:39:23.987+0000 INFO  [org.neo4j]:   Neo4j - Graph Database Kernel (neo4j-kernel), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:39:23.987+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.1 (neo4j-cypher-compiler-2.1), version: 2.1.7; revision: 2.1.7:2.1-maint:649/ed233fc1087f4549d1956b8ec4a504fe2f13a446
+2015-04-28 03:39:23.987+0000 INFO  [org.neo4j]:   Neo4j - Community (neo4j), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:39:23.987+0000 INFO  [org.neo4j]:   neo4j-udc, version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:39:23.987+0000 INFO  [org.neo4j]:   Neo4j - Lucene Index (neo4j-lucene-index), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:39:23.987+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.0 (neo4j-cypher-compiler-2.0), version: 2.0.4; revision: 2.0.4:2.0-maint:130/4a7d10bc274a5d26a180bbe9df25100e8a694748
+2015-04-28 03:39:23.987+0000 INFO  [org.neo4j]:   Neo4j - Graph Matching (neo4j-graph-matching), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:39:23.987+0000 INFO  [org.neo4j]:   Neo4j - JMX support (neo4j-jmx), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:39:23.987+0000 INFO  [org.neo4j]:   Neo4j - Cypher (neo4j-cypher), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:39:23.987+0000 INFO  [org.neo4j]:   Neo4j - Graph Algorithms (neo4j-graph-algo), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:39:23.988+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions END ---
+2015-04-28 03:39:23.989+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS START ---
+2015-04-28 03:39:23.989+0000 INFO  [org.neo4j]: Store versions:
+    Store versions:
+      NeoStore v0.A.5
+      SchemaStore v0.A.5
+      NodeStore v0.A.5
+      RelationshipStore v0.A.5
+      RelationshipTypeStore v0.A.5
+      LabelTokenStore v0.A.5
+      PropertyStore v0.A.5
+      PropertyIndexStore v0.A.5
+      StringPropertyStore v0.A.5
+      ArrayPropertyStore v0.A.5
+      RelationshipGroupStore v0.A.5
+2015-04-28 03:39:23.990+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS END ---
+2015-04-28 03:39:23.990+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE START ---
+2015-04-28 03:39:23.990+0000 INFO  [org.neo4j]: Id usage:
+    Id usage:
+      SchemaStore: used=1 high=0
+      NodeStore: used=0 high=-1
+      RelationshipStore: used=0 high=-1
+      RelationshipTypeStore: used=0 high=-1
+      LabelTokenStore: used=0 high=-1
+      PropertyStore: used=0 high=-1
+      PropertyIndexStore: used=0 high=-1
+      StringPropertyStore: used=1 high=0
+      ArrayPropertyStore: used=1 high=0
+      RelationshipGroupStore: used=1 high=0
+2015-04-28 03:39:23.990+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE END ---
+2015-04-28 03:39:23.991+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles START ---
+2015-04-28 03:39:23.993+0000 INFO  [org.neo4j]: Disk space on partition (Total / Free / Free %): 255744888832 / 60978663424 / 23
+Storage files: (filename : modification date - size)
+      index:
+      - Total: 2015-04-27T22:39:22-0500 - 0.00 B
+      lock: 2015-04-27T22:39:22-0500 - 0.00 B
+      messages.log: 2015-04-27T22:39:21-0500 - 21.43 kB
+      neostore: 2015-04-27T22:39:23-0500 - 99.00 B
+      neostore.counts.db.a: 2015-04-27T22:39:23-0500 - 114.00 B
+      neostore.id: 2015-04-27T22:39:23-0500 - 9.00 B
+      neostore.labeltokenstore.db: 2015-04-27T22:39:23-0500 - 0.00 B
+      neostore.labeltokenstore.db.id: 2015-04-27T22:39:23-0500 - 9.00 B
+      neostore.labeltokenstore.db.names: 2015-04-27T22:39:23-0500 - 38.00 B
+      neostore.labeltokenstore.db.names.id: 2015-04-27T22:39:22-0500 - 9.00 B
+      neostore.nodestore.db: 2015-04-27T22:39:23-0500 - 0.00 B
+      neostore.nodestore.db.id: 2015-04-27T22:39:23-0500 - 9.00 B
+      neostore.nodestore.db.labels: 2015-04-27T22:39:23-0500 - 68.00 B
+      neostore.nodestore.db.labels.id: 2015-04-27T22:39:23-0500 - 9.00 B
+      neostore.propertystore.db: 2015-04-27T22:39:23-0500 - 0.00 B
+      neostore.propertystore.db.arrays: 2015-04-27T22:39:23-0500 - 128.00 B
+      neostore.propertystore.db.arrays.id: 2015-04-27T22:39:23-0500 - 9.00 B
+      neostore.propertystore.db.id: 2015-04-27T22:39:23-0500 - 9.00 B
+      neostore.propertystore.db.index: 2015-04-27T22:39:23-0500 - 0.00 B
+      neostore.propertystore.db.index.id: 2015-04-27T22:39:23-0500 - 9.00 B
+      neostore.propertystore.db.index.keys: 2015-04-27T22:39:23-0500 - 38.00 B
+      neostore.propertystore.db.index.keys.id: 2015-04-27T22:39:23-0500 - 9.00 B
+      neostore.propertystore.db.strings: 2015-04-27T22:39:23-0500 - 128.00 B
+      neostore.propertystore.db.strings.id: 2015-04-27T22:39:23-0500 - 9.00 B
+      neostore.relationshipgroupstore.db: 2015-04-27T22:39:23-0500 - 25.00 B
+      neostore.relationshipgroupstore.db.id: 2015-04-27T22:39:23-0500 - 9.00 B
+      neostore.relationshipstore.db: 2015-04-27T22:39:23-0500 - 0.00 B
+      neostore.relationshipstore.db.id: 2015-04-27T22:39:23-0500 - 9.00 B
+      neostore.relationshiptypestore.db: 2015-04-27T22:39:23-0500 - 0.00 B
+      neostore.relationshiptypestore.db.id: 2015-04-27T22:39:22-0500 - 9.00 B
+      neostore.relationshiptypestore.db.names: 2015-04-27T22:39:23-0500 - 38.00 B
+      neostore.relationshiptypestore.db.names.id: 2015-04-27T22:39:22-0500 - 9.00 B
+      neostore.schemastore.db: 2015-04-27T22:39:23-0500 - 64.00 B
+      neostore.schemastore.db.id: 2015-04-27T22:39:23-0500 - 9.00 B
+      neostore.transaction.db.0: 2015-04-27T22:39:23-0500 - 16.00 B
+      schema:
+        label:
+          lucene:
+            write.lock: 2015-04-27T22:39:23-0500 - 0.00 B
+          - Total: 2015-04-27T22:39:23-0500 - 0.00 B
+        - Total: 2015-04-27T22:39:23-0500 - 0.00 B
+      - Total: 2015-04-27T22:39:23-0500 - 0.00 B
+      store_lock: 2015-04-27T22:39:22-0500 - 0.00 B
+2015-04-28 03:39:24.001+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles END ---
+2015-04-28 03:39:24.029+0000 INFO  [org.neo4j]: Database is now ready
+2015-04-28 03:39:24.744+0000 INFO  [org.neo4j]: Shutdown started
+2015-04-28 03:39:24.744+0000 INFO  [org.neo4j]: Database is now unavailable
+2015-04-28 03:39:24.759+0000 INFO  [org.neo4j]: About to rotate counts store at transaction 3 to [db\data\neostore.counts.db.b], from [db\data\neostore.counts.db.a].
+2015-04-28 03:39:24.766+0000 INFO  [org.neo4j]: Successfully rotated counts store at transaction 3 to [db\data\neostore.counts.db.b], from [db\data\neostore.counts.db.a].
+2015-04-28 03:39:25.001+0000 INFO  [org.neo4j]: NeoStore closed
+2015-04-28 03:39:25.001+0000 INFO  [org.neo4j]: --- STOPPING diagnostics START ---
+2015-04-28 03:39:25.002+0000 INFO  [org.neo4j]: --- STOPPING diagnostics END ---
+2015-04-28 03:40:56.334+0000 INFO  [org.neo4j]: You are using an unsupported version of the Java runtime. Please use Oracle(R) Java(TM) Runtime Environment 7 or OpenJDK(TM) 7.
+2015-04-28 03:40:56.460+0000 INFO  [org.neo4j]: No locking implementation specified, defaulting to 'community'
+2015-04-28 03:40:56.500+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics START ---
+2015-04-28 03:40:56.501+0000 INFO  [org.neo4j]: Neo4j Kernel properties:
+    store_dir=db/data
+    ephemeral=false
+2015-04-28 03:40:56.504+0000 INFO  [org.neo4j]: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    NETWORK
+2015-04-28 03:40:56.504+0000 INFO  [org.neo4j]: System memory information:
+    Total Physical memory: 15.63 GB
+    Free Physical memory: 11.64 GB
+    Committed virtual memory: 462.47 MB
+    Total swap space: 31.27 GB
+    Free swap space: 24.91 GB
+2015-04-28 03:40:56.506+0000 INFO  [org.neo4j]: JVM memory information:
+    Free  memory: 143.15 MB
+    Total memory: 241.50 MB
+    Max   memory: 3.48 GB
+    Garbage Collector: PS Scavenge: [PS Eden Space, PS Survivor Space]
+    Garbage Collector: PS MarkSweep: [PS Eden Space, PS Survivor Space, PS Old Gen]
+    Memory Pool: Code Cache (Non-heap memory): committed=3.38 MB, used=3.31 MB, max=240.00 MB, threshold=0.00 B
+    Memory Pool: Metaspace (Non-heap memory): committed=13.13 MB, used=12.58 MB, max=-1.00 B, threshold=0.00 B
+    Memory Pool: Compressed Class Space (Non-heap memory): committed=1.88 MB, used=1.67 MB, max=1.00 GB, threshold=0.00 B
+    Memory Pool: PS Eden Space (Heap memory): committed=63.00 MB, used=61.86 MB, max=1.28 GB, threshold=?
+    Memory Pool: PS Survivor Space (Heap memory): committed=10.50 MB, used=10.48 MB, max=10.50 MB, threshold=?
+    Memory Pool: PS Old Gen (Heap memory): committed=168.00 MB, used=26.01 MB, max=2.61 GB, threshold=0.00 B
+2015-04-28 03:40:56.508+0000 INFO  [org.neo4j]: Operating system information:
+    Operating System: Windows 7; version: 6.1; arch: amd64; cpus: 8
+    Process id: 12264@BRIRICHE-WS
+    Byte order: LITTLE_ENDIAN
+    Local timezone: America/Chicago
+2015-04-28 03:40:56.509+0000 INFO  [org.neo4j]: JVM information:
+    VM Name: Java HotSpot(TM) 64-Bit Server VM
+    VM Vendor: Oracle Corporation
+    VM Version: 25.40-b25
+    JIT compiler: HotSpot 64-Bit Tiered Compilers
+    VM Arguments: [-Dfile.encoding=Cp1252]
+2015-04-28 03:40:56.509+0000 INFO  [org.neo4j]: Java classpath:
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.2/c707664e020218f8529b9a5e55016ee15f0f82ac/log4j-core-2.2.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-core/3.6.2/9ec77e2507f9cc01756964c71d91efd8154a8c47/lucene-core-3.6.2.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/localedata.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.parboiled/parboiled-scala_2.10/1.1.7/c20d486f11cc115c0df2ebc2aefb2773f9f9fb11/parboiled-scala_2.10-1.1.7.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/access-bridge-64.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-csv/2.2.1/32a972a7da50831d8a83377d7833858c9ba50d03/neo4j-csv-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-primitive-collections/2.2.1/a17b85f6714b8d6078a0213e6eda5425201c7776/neo4j-primitive-collections-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-unsafe/2.2.1/29058160d20972dc5e386d6ca21e0c29b0c05168/neo4j-unsafe-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-kernel/2.2.1/7b6aa46bf07146ea6240ff6240da9827fbdde6ca/neo4j-kernel-2.2.1.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\jsse.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\charsets.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-compiler-1.9/2.0.4/93381595ffca5c8813eb65af32a910637dc0c408/neo4j-cypher-compiler-1.9-2.0.4.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\rt.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/net.sf.opencsv/opencsv/2.3/c23708cdb9e80a144db433e23344a788a1fd6599/opencsv-2.3.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/dnsns.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.2/d7ef6ad7ff0711dd12fe409d62d72d6ed14516e0/log4j-api-2.2.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/sunec.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-udc/2.2.1/51e3e10caebe09abcfecbbefc5aa712555a69951/neo4j-udc-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/workspace/workspace/JavaBuffer/bin/
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-graph-matching/2.2.1/3c4b77b51ad58cee1278beb691bb573ccb1312b6/neo4j-graph-matching-2.2.1.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\resources.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/jfxrt.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/zipfs.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-reflect/2.10.5/7392facb48876c67a89fcb086112b195f5f6bbc3/scala-reflect-2.10.5.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\jce.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-compiler-2.0/2.0.4/13277d9b4ae208ca1145210488502a80bbf20376/neo4j-cypher-compiler-2.0-2.0.4.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/com.googlecode.concurrentlinkedhashmap/concurrentlinkedhashmap-lru/1.4/d4b42ed76a166a81dbac613339eed3343be6bd2d/concurrentlinkedhashmap-lru-1.4.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-compiler-2.1/2.1.7/599ad633a098153150640484202f7c6c5b82766c/neo4j-cypher-compiler-2.1-2.1.7.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-consistency-check/2.2.1/61618073b9ffb65898f50e4976f3dd30fc1993c8/neo4j-consistency-check-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher/2.2.1/3f73a0f935586104b7fa93f38c4311a778dfc57d/neo4j-cypher-2.2.1.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\classes
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/com.codesnippets4all/quick-json/1.0.4/d71030f64dccafcf77aefb4c85edd63716855cd0/quick-json-1.0.4.jar
+     [classpath + loader.0] file:/C:/Users/bririche/workspace/workspace/JavaBuffer/sun-httpserver/
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/sunmscapi.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/sunpkcs11.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j/2.2.1/2193d074aabc4ab871fac2282b080edaf6233cc2/neo4j-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-io/2.2.1/6af91c60951c801e396007cdd101df000d7e8e96/neo4j-io-2.2.1.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/cldrdata.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/jaccess.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\jfr.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-graph-algo/2.2.1/c4e60af0e4767905fad83d57041a9d4677e4c6de/neo4j-graph-algo-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-compiler-2.2/2.2.1/7064a853a25cf99a92f0d092e498bb3ab3141ca6/neo4j-cypher-compiler-2.2-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-jmx/2.2.1/9a8cb004784c519e6478807937d7763791915e74/neo4j-jmx-2.2.1.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/sunjce_provider.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\sunrsasign.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/nashorn.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.parboiled/parboiled-core/1.1.7/a60ff9a54cbeb30ec44c89e16ac4c35913cbad5a/parboiled-core-1.1.7.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.10.5/57ac67a6cf6fd591e235c62f8893438e8d10431d/scala-library-2.10.5.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-lucene-index/2.2.1/ab69e1387e08b533244a06b7b54593b9927929a6/neo4j-lucene-index-2.2.1.jar
+2015-04-28 03:40:56.513+0000 INFO  [org.neo4j]: Library path:
+    C:\Program Files\Java\jre1.8.0_40\bin
+    C:\Windows\Sun\Java\bin
+    C:\Windows\System32
+    C:\Windows
+    C:\Program Files\Java\jre1.8.0_40\bin\server
+    C:\Program Files\Java\jre1.8.0_40\bin
+    C:\Program Files\Java\jre1.8.0_40\lib\amd64
+    C:\ProgramData\Oracle\Java\javapath
+    C:\Program Files\md5
+    C:\Program Files\Java\jdk1.8.0_40\bin
+    C:\Windows\System32
+    C:\Windows
+    C:\Windows\System32\wbem
+    C:\Windows\System32\WindowsPowerShell\v1.0
+    C:\Windows\System32\WindowsPowerShell\v1.0
+    C:\Program Files (x86)\QuickTime\QTSystem
+    C:\Program Files (x86)\Git\cmd
+    C:\Program Files (x86)\gradle-2.1\bin
+    C:\Program Files (x86)\Skype\Phone
+    C:\Users\bririche\AppData\Local\atom\bin
+    C:\Program Files\eclipse
+    C:\Users\bririche\workspace\workspace\JavaBuffer
+    C:\Users\bririche\workspace\workspace\JavaBuffer
+2015-04-28 03:40:56.520+0000 INFO  [org.neo4j]: System.properties:
+    sun.boot.library.path = C:\Program Files\Java\jre1.8.0_40\bin
+    path.separator = ;
+    file.encoding.pkg = sun.io
+    user.country = US
+    user.script = 
+    sun.java.launcher = SUN_STANDARD
+    sun.os.patch.level = Service Pack 1
+    user.dir = C:\Users\bririche\workspace\workspace\JavaBuffer
+    user.variant = 
+    sun.jnu.encoding = Cp1252
+    sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+    user.home = C:\Users\bririche
+    user.timezone = America/Chicago
+    file.encoding = Cp1252
+    user.name = bririche
+    sun.java.command = org.javabuffer.JavaBuffer
+    sun.arch.data.model = 64
+    user.language = en
+    awt.toolkit = sun.awt.windows.WToolkit
+    file.separator = \
+    sun.io.unicode.encoding = UnicodeLittle
+    sun.cpu.endian = little
+    sun.desktop = windows
+    sun.cpu.isalist = amd64
+2015-04-28 03:40:56.521+0000 INFO  [org.neo4j]: Network information:
+    Interface Software Loopback Interface 1:
+        address: 127.0.0.1
+        address: 0:0:0:0:0:0:0:1
+    Interface WAN Miniport (SSTP):
+    Interface WAN Miniport (L2TP):
+    Interface WAN Miniport (PPTP):
+    Interface WAN Miniport (PPPOE):
+    Interface WAN Miniport (IPv6):
+    Interface WAN Miniport (Network Monitor):
+    Interface WAN Miniport (IP):
+    Interface RAS Async Adapter:
+    Interface WAN Miniport (IKEv2):
+    Interface Intel(R) Ethernet Connection I217-LM:
+        address: fe80:0:0:0:988b:b4a5:98a5:7353%eth3
+    Interface Intel(R) Dual Band Wireless-AC 7260:
+        address: 192.168.1.76
+        address: 2602:306:325c:87e0:4c5a:48e0:9e5e:7fa5
+        address: 2602:306:325c:87e0:953b:d726:dbe2:1271
+        address: fe80:0:0:0:4c5a:48e0:9e5e:7fa5%wlan0
+    Interface Bluetooth Device (RFCOMM Protocol TDI):
+    Interface Bluetooth Device (Personal Area Network):
+    Interface Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64:
+    Interface Teredo Tunneling Pseudo-Interface:
+        address: 2001:0:9d38:6ab8:2c80:28db:3f57:feb3
+        address: fe80:0:0:0:2c80:28db:3f57:feb3%net5
+    Interface VirtualBox Host-Only Ethernet Adapter:
+        address: 192.168.56.1
+        address: fe80:0:0:0:6deb:d823:6ce:aea6%eth6
+    Interface Microsoft ISATAP Adapter #2:
+        address: fe80:0:0:0:0:5efe:c0a8:3801%net6
+    Interface Intel(R) Ethernet Connection I217-LM - VirtualBox Bridged Networking Driver Miniport:
+    Interface Intel(R) Dual Band Wireless-AC 7260 - VirtualBox Bridged Networking Driver Miniport:
+    Interface VMware Virtual Ethernet Adapter for VMnet1:
+        address: 192.168.233.1
+        address: fe80:0:0:0:411a:ec0b:c323:48b2%eth9
+    Interface VMware Virtual Ethernet Adapter for VMnet8:
+        address: 192.168.111.1
+        address: fe80:0:0:0:e418:e7e2:703f:5390%eth10
+    Interface Microsoft Virtual WiFi Miniport Adapter:
+        address: fe80:0:0:0:f486:17a:792c:cd04%wlan1
+    Interface Microsoft Virtual WiFi Miniport Adapter - VirtualBox Bridged Networking Driver Miniport:
+    Interface Microsoft ISATAP Adapter #5:
+        address: fe80:0:0:0:0:5efe:c0a8:6f01%net7
+    Interface Microsoft ISATAP Adapter #7:
+    Interface Microsoft ISATAP Adapter #3:
+        address: fe80:0:0:0:0:5efe:c0a8:14c%net9
+    Interface Intel(R) Dual Band Wireless-AC 7260 - VirtualBox Bridged Networking Driver Miniport-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter #6:
+        address: fe80:0:0:0:0:5efe:c0a8:e901%net10
+    Interface Microsoft 6to4 Adapter:
+    Interface Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64 - VirtualBox Bridged Networking Driver Miniport:
+    Interface Microsoft ISATAP Adapter:
+    Interface Microsoft 6to4 Adapter-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter #2-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter #3-McAfee NDIS Light-Weight Filter-0000:
+    Interface Intel(R) Dual Band Wireless-AC 7260 - VirtualBox Bridged Networking Driver Miniport-QoS Packet Scheduler-0000:
+    Interface Microsoft ISATAP Adapter #5-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter #6-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter #7-McAfee NDIS Light-Weight Filter-0000:
+    Interface Teredo Tunneling Pseudo-Interface-McAfee NDIS Light-Weight Filter-0000:
+    Interface Intel(R) Dual Band Wireless-AC 7260-Virtual WiFi Filter Driver-0000:
+    Interface WAN Miniport (Network Monitor)-McAfee NDIS Light-Weight Filter-0000:
+    Interface WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000:
+    Interface WAN Miniport (IP)-McAfee NDIS Light-Weight Filter-0000:
+    Interface WAN Miniport (IP)-QoS Packet Scheduler-0000:
+    Interface WAN Miniport (IPv6)-McAfee NDIS Light-Weight Filter-0000:
+    Interface WAN Miniport (IPv6)-QoS Packet Scheduler-0000:
+    Interface VirtualBox Host-Only Ethernet Adapter-McAfee NDIS Light-Weight Filter-0000:
+    Interface VirtualBox Host-Only Ethernet Adapter-QoS Packet Scheduler-0000:
+    Interface VirtualBox Host-Only Ethernet Adapter-WFP LightWeight Filter-0000:
+    Interface Intel(R) Dual Band Wireless-AC 7260 - VirtualBox Bridged Networking Driver Miniport-WFP LightWeight Filter-0000:
+    Interface Microsoft Virtual WiFi Miniport Adapter - VirtualBox Bridged Networking Driver Miniport-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft Virtual WiFi Miniport Adapter - VirtualBox Bridged Networking Driver Miniport-QoS Packet Scheduler-0000:
+    Interface Intel(R) Dual Band Wireless-AC 7260-Native WiFi Filter Driver-0000:
+    Interface Microsoft Virtual WiFi Miniport Adapter - VirtualBox Bridged Networking Driver Miniport-WFP LightWeight Filter-0000:
+    Interface Intel(R) Ethernet Connection I217-LM - VirtualBox Bridged Networking Driver Miniport-McAfee NDIS Light-Weight Filter-0000:
+    Interface Intel(R) Ethernet Connection I217-LM - VirtualBox Bridged Networking Driver Miniport-QoS Packet Scheduler-0000:
+    Interface Microsoft Virtual WiFi Miniport Adapter-Native WiFi Filter Driver-0000:
+    Interface Intel(R) Ethernet Connection I217-LM - VirtualBox Bridged Networking Driver Miniport-WFP LightWeight Filter-0000:
+2015-04-28 03:40:56.740+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics END ---
+2015-04-28 03:40:57.106+0000 INFO  [org.neo4j]: Opened logical log [db\data\neostore.transaction.db.1] version=1, lastTxId=3 (clean)
+2015-04-28 03:40:57.116+0000 INFO  [org.neo4j]: Kernel health set to OK
+2015-04-28 03:40:57.688+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions START ---
+2015-04-28 03:40:57.688+0000 INFO  [org.neo4j]: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId{creationTime=1430192362342, randomId=6264918822340514857, storeVersion=14969031248344582, upgradeTime=1430192362342, upgradeId=1}
+2015-04-28 03:40:57.688+0000 INFO  [org.neo4j]: Kernel version: Neo4j - Graph Database Kernel (neo4j-kernel), version: 2.2.1
+2015-04-28 03:40:57.688+0000 INFO  [org.neo4j]: Neo4j component versions:
+2015-04-28 03:40:57.691+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 1.9 (neo4j-cypher-compiler-1.9), version: 2.0.4; revision: 2.0.4:2.0-maint:130/4a7d10bc274a5d26a180bbe9df25100e8a694748
+2015-04-28 03:40:57.691+0000 INFO  [org.neo4j]:   Neo4j - Consistency Checker (neo4j-consistency-check), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:40:57.691+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.2 (neo4j-cypher-compiler-2.2), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:40:57.691+0000 INFO  [org.neo4j]:   Neo4j - Graph Database Kernel (neo4j-kernel), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:40:57.692+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.1 (neo4j-cypher-compiler-2.1), version: 2.1.7; revision: 2.1.7:2.1-maint:649/ed233fc1087f4549d1956b8ec4a504fe2f13a446
+2015-04-28 03:40:57.692+0000 INFO  [org.neo4j]:   Neo4j - Community (neo4j), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:40:57.692+0000 INFO  [org.neo4j]:   neo4j-udc, version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:40:57.692+0000 INFO  [org.neo4j]:   Neo4j - Lucene Index (neo4j-lucene-index), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:40:57.692+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.0 (neo4j-cypher-compiler-2.0), version: 2.0.4; revision: 2.0.4:2.0-maint:130/4a7d10bc274a5d26a180bbe9df25100e8a694748
+2015-04-28 03:40:57.692+0000 INFO  [org.neo4j]:   Neo4j - Graph Matching (neo4j-graph-matching), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:40:57.692+0000 INFO  [org.neo4j]:   Neo4j - JMX support (neo4j-jmx), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:40:57.692+0000 INFO  [org.neo4j]:   Neo4j - Cypher (neo4j-cypher), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:40:57.692+0000 INFO  [org.neo4j]:   Neo4j - Graph Algorithms (neo4j-graph-algo), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:40:57.692+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions END ---
+2015-04-28 03:40:57.693+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS START ---
+2015-04-28 03:40:57.694+0000 INFO  [org.neo4j]: Store versions:
+    Store versions:
+      NeoStore v0.A.5
+      SchemaStore v0.A.5
+      NodeStore v0.A.5
+      RelationshipStore v0.A.5
+      RelationshipTypeStore v0.A.5
+      LabelTokenStore v0.A.5
+      PropertyStore v0.A.5
+      PropertyIndexStore v0.A.5
+      StringPropertyStore v0.A.5
+      ArrayPropertyStore v0.A.5
+      RelationshipGroupStore v0.A.5
+2015-04-28 03:40:57.694+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS END ---
+2015-04-28 03:40:57.694+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE START ---
+2015-04-28 03:40:57.694+0000 INFO  [org.neo4j]: Id usage:
+    Id usage:
+      SchemaStore: used=1 high=0
+      NodeStore: used=1 high=0
+      RelationshipStore: used=0 high=-1
+      RelationshipTypeStore: used=0 high=-1
+      LabelTokenStore: used=0 high=-1
+      PropertyStore: used=1 high=0
+      PropertyIndexStore: used=1 high=0
+      StringPropertyStore: used=1 high=0
+      ArrayPropertyStore: used=1 high=0
+      RelationshipGroupStore: used=1 high=0
+2015-04-28 03:40:57.695+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE END ---
+2015-04-28 03:40:57.695+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles START ---
+2015-04-28 03:40:57.697+0000 INFO  [org.neo4j]: Disk space on partition (Total / Free / Free %): 255744888832 / 60978008064 / 23
+Storage files: (filename : modification date - size)
+      index:
+      - Total: 2015-04-27T22:39:22-0500 - 0.00 B
+      lock: 2015-04-27T22:40:56-0500 - 0.00 B
+      messages.log: 2015-04-27T22:39:25-0500 - 46.27 kB
+      neostore: 2015-04-27T22:40:56-0500 - 99.00 B
+      neostore.counts.db.a: 2015-04-27T22:39:23-0500 - 114.00 B
+      neostore.counts.db.b: 2015-04-27T22:39:24-0500 - 146.00 B
+      neostore.id: 2015-04-27T22:39:24-0500 - 9.00 B
+      neostore.labeltokenstore.db: 2015-04-27T22:40:56-0500 - 0.00 B
+      neostore.labeltokenstore.db.id: 2015-04-27T22:39:24-0500 - 9.00 B
+      neostore.labeltokenstore.db.names: 2015-04-27T22:40:56-0500 - 38.00 B
+      neostore.labeltokenstore.db.names.id: 2015-04-27T22:39:24-0500 - 9.00 B
+      neostore.nodestore.db: 2015-04-27T22:40:56-0500 - 15.00 B
+      neostore.nodestore.db.id: 2015-04-27T22:39:24-0500 - 9.00 B
+      neostore.nodestore.db.labels: 2015-04-27T22:40:56-0500 - 68.00 B
+      neostore.nodestore.db.labels.id: 2015-04-27T22:39:24-0500 - 9.00 B
+      neostore.propertystore.db: 2015-04-27T22:40:56-0500 - 41.00 B
+      neostore.propertystore.db.arrays: 2015-04-27T22:40:56-0500 - 128.00 B
+      neostore.propertystore.db.arrays.id: 2015-04-27T22:39:24-0500 - 9.00 B
+      neostore.propertystore.db.id: 2015-04-27T22:39:24-0500 - 9.00 B
+      neostore.propertystore.db.index: 2015-04-27T22:40:56-0500 - 9.00 B
+      neostore.propertystore.db.index.id: 2015-04-27T22:39:24-0500 - 9.00 B
+      neostore.propertystore.db.index.keys: 2015-04-27T22:40:56-0500 - 76.00 B
+      neostore.propertystore.db.index.keys.id: 2015-04-27T22:39:24-0500 - 9.00 B
+      neostore.propertystore.db.strings: 2015-04-27T22:40:56-0500 - 128.00 B
+      neostore.propertystore.db.strings.id: 2015-04-27T22:39:24-0500 - 9.00 B
+      neostore.relationshipgroupstore.db: 2015-04-27T22:40:56-0500 - 25.00 B
+      neostore.relationshipgroupstore.db.id: 2015-04-27T22:39:24-0500 - 9.00 B
+      neostore.relationshipstore.db: 2015-04-27T22:40:56-0500 - 0.00 B
+      neostore.relationshipstore.db.id: 2015-04-27T22:39:24-0500 - 9.00 B
+      neostore.relationshiptypestore.db: 2015-04-27T22:40:56-0500 - 0.00 B
+      neostore.relationshiptypestore.db.id: 2015-04-27T22:39:24-0500 - 9.00 B
+      neostore.relationshiptypestore.db.names: 2015-04-27T22:40:56-0500 - 38.00 B
+      neostore.relationshiptypestore.db.names.id: 2015-04-27T22:39:24-0500 - 9.00 B
+      neostore.schemastore.db: 2015-04-27T22:40:56-0500 - 64.00 B
+      neostore.schemastore.db.id: 2015-04-27T22:39:24-0500 - 9.00 B
+      neostore.transaction.db.0: 2015-04-27T22:39:24-0500 - 330.00 B
+      neostore.transaction.db.1: 2015-04-27T22:40:57-0500 - 16.00 B
+      schema:
+        label:
+          lucene:
+            segments.gen: 2015-04-27T22:39:24-0500 - 20.00 B
+            segments_1: 2015-04-27T22:39:24-0500 - 32.00 B
+            write.lock: 2015-04-27T22:40:57-0500 - 0.00 B
+          - Total: 2015-04-27T22:40:57-0500 - 52.00 B
+        - Total: 2015-04-27T22:39:23-0500 - 52.00 B
+      - Total: 2015-04-27T22:39:23-0500 - 52.00 B
+      store_lock: 2015-04-27T22:39:22-0500 - 0.00 B
+2015-04-28 03:40:57.706+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles END ---
+2015-04-28 03:40:57.735+0000 INFO  [org.neo4j]: Database is now ready
+2015-04-28 03:40:58.462+0000 INFO  [org.neo4j]: Shutdown started
+2015-04-28 03:40:58.462+0000 INFO  [org.neo4j]: Database is now unavailable
+2015-04-28 03:40:58.467+0000 INFO  [org.neo4j]: About to rotate counts store at transaction 4 to [db\data\neostore.counts.db.a], from [db\data\neostore.counts.db.b].
+2015-04-28 03:40:58.474+0000 INFO  [org.neo4j]: Successfully rotated counts store at transaction 4 to [db\data\neostore.counts.db.a], from [db\data\neostore.counts.db.b].
+2015-04-28 03:40:58.745+0000 INFO  [org.neo4j]: NeoStore closed
+2015-04-28 03:40:58.745+0000 INFO  [org.neo4j]: --- STOPPING diagnostics START ---
+2015-04-28 03:40:58.745+0000 INFO  [org.neo4j]: --- STOPPING diagnostics END ---
+2015-04-28 03:41:23.520+0000 INFO  [org.neo4j]: You are using an unsupported version of the Java runtime. Please use Oracle(R) Java(TM) Runtime Environment 7 or OpenJDK(TM) 7.
+2015-04-28 03:41:23.646+0000 INFO  [org.neo4j]: No locking implementation specified, defaulting to 'community'
+2015-04-28 03:41:23.646+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics START ---
+2015-04-28 03:41:23.647+0000 INFO  [org.neo4j]: Neo4j Kernel properties:
+    store_dir=db/data
+    ephemeral=false
+2015-04-28 03:41:23.647+0000 INFO  [org.neo4j]: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    NETWORK
+2015-04-28 03:41:23.647+0000 INFO  [org.neo4j]: System memory information:
+    Total Physical memory: 15.63 GB
+    Free Physical memory: 11.42 GB
+    Committed virtual memory: 851.35 MB
+    Total swap space: 31.27 GB
+    Free swap space: 24.53 GB
+2015-04-28 03:41:23.648+0000 INFO  [org.neo4j]: JVM memory information:
+    Free  memory: 194.59 MB
+    Total memory: 388.00 MB
+    Max   memory: 3.48 GB
+    Garbage Collector: PS Scavenge: [PS Eden Space, PS Survivor Space]
+    Garbage Collector: PS MarkSweep: [PS Eden Space, PS Survivor Space, PS Old Gen]
+    Memory Pool: Code Cache (Non-heap memory): committed=5.81 MB, used=5.77 MB, max=240.00 MB, threshold=0.00 B
+    Memory Pool: Metaspace (Non-heap memory): committed=32.75 MB, used=32.28 MB, max=-1.00 B, threshold=0.00 B
+    Memory Pool: Compressed Class Space (Non-heap memory): committed=5.75 MB, used=5.63 MB, max=1.00 GB, threshold=0.00 B
+    Memory Pool: PS Eden Space (Heap memory): committed=125.50 MB, used=21.66 MB, max=1.20 GB, threshold=?
+    Memory Pool: PS Survivor Space (Heap memory): committed=10.50 MB, used=10.49 MB, max=10.50 MB, threshold=?
+    Memory Pool: PS Old Gen (Heap memory): committed=252.00 MB, used=161.27 MB, max=2.61 GB, threshold=0.00 B
+2015-04-28 03:41:23.649+0000 INFO  [org.neo4j]: Operating system information:
+    Operating System: Windows 7; version: 6.1; arch: amd64; cpus: 8
+    Process id: 12264@BRIRICHE-WS
+    Byte order: LITTLE_ENDIAN
+    Local timezone: America/Chicago
+2015-04-28 03:41:23.650+0000 INFO  [org.neo4j]: JVM information:
+    VM Name: Java HotSpot(TM) 64-Bit Server VM
+    VM Vendor: Oracle Corporation
+    VM Version: 25.40-b25
+    JIT compiler: HotSpot 64-Bit Tiered Compilers
+    VM Arguments: [-Dfile.encoding=Cp1252]
+2015-04-28 03:41:23.650+0000 INFO  [org.neo4j]: Java classpath:
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.2/c707664e020218f8529b9a5e55016ee15f0f82ac/log4j-core-2.2.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-core/3.6.2/9ec77e2507f9cc01756964c71d91efd8154a8c47/lucene-core-3.6.2.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/localedata.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.parboiled/parboiled-scala_2.10/1.1.7/c20d486f11cc115c0df2ebc2aefb2773f9f9fb11/parboiled-scala_2.10-1.1.7.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/access-bridge-64.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-csv/2.2.1/32a972a7da50831d8a83377d7833858c9ba50d03/neo4j-csv-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-primitive-collections/2.2.1/a17b85f6714b8d6078a0213e6eda5425201c7776/neo4j-primitive-collections-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-unsafe/2.2.1/29058160d20972dc5e386d6ca21e0c29b0c05168/neo4j-unsafe-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-kernel/2.2.1/7b6aa46bf07146ea6240ff6240da9827fbdde6ca/neo4j-kernel-2.2.1.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\jsse.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\charsets.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-compiler-1.9/2.0.4/93381595ffca5c8813eb65af32a910637dc0c408/neo4j-cypher-compiler-1.9-2.0.4.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\rt.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/net.sf.opencsv/opencsv/2.3/c23708cdb9e80a144db433e23344a788a1fd6599/opencsv-2.3.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/dnsns.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.2/d7ef6ad7ff0711dd12fe409d62d72d6ed14516e0/log4j-api-2.2.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/sunec.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-udc/2.2.1/51e3e10caebe09abcfecbbefc5aa712555a69951/neo4j-udc-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/workspace/workspace/JavaBuffer/bin/
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-graph-matching/2.2.1/3c4b77b51ad58cee1278beb691bb573ccb1312b6/neo4j-graph-matching-2.2.1.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\resources.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/jfxrt.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/zipfs.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-reflect/2.10.5/7392facb48876c67a89fcb086112b195f5f6bbc3/scala-reflect-2.10.5.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\jce.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-compiler-2.0/2.0.4/13277d9b4ae208ca1145210488502a80bbf20376/neo4j-cypher-compiler-2.0-2.0.4.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/com.googlecode.concurrentlinkedhashmap/concurrentlinkedhashmap-lru/1.4/d4b42ed76a166a81dbac613339eed3343be6bd2d/concurrentlinkedhashmap-lru-1.4.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-compiler-2.1/2.1.7/599ad633a098153150640484202f7c6c5b82766c/neo4j-cypher-compiler-2.1-2.1.7.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-consistency-check/2.2.1/61618073b9ffb65898f50e4976f3dd30fc1993c8/neo4j-consistency-check-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher/2.2.1/3f73a0f935586104b7fa93f38c4311a778dfc57d/neo4j-cypher-2.2.1.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\classes
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/com.codesnippets4all/quick-json/1.0.4/d71030f64dccafcf77aefb4c85edd63716855cd0/quick-json-1.0.4.jar
+     [classpath + loader.0] file:/C:/Users/bririche/workspace/workspace/JavaBuffer/sun-httpserver/
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/sunmscapi.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/sunpkcs11.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j/2.2.1/2193d074aabc4ab871fac2282b080edaf6233cc2/neo4j-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-io/2.2.1/6af91c60951c801e396007cdd101df000d7e8e96/neo4j-io-2.2.1.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/cldrdata.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/jaccess.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\jfr.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-graph-algo/2.2.1/c4e60af0e4767905fad83d57041a9d4677e4c6de/neo4j-graph-algo-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-compiler-2.2/2.2.1/7064a853a25cf99a92f0d092e498bb3ab3141ca6/neo4j-cypher-compiler-2.2-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-jmx/2.2.1/9a8cb004784c519e6478807937d7763791915e74/neo4j-jmx-2.2.1.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/sunjce_provider.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\sunrsasign.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/nashorn.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.parboiled/parboiled-core/1.1.7/a60ff9a54cbeb30ec44c89e16ac4c35913cbad5a/parboiled-core-1.1.7.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.10.5/57ac67a6cf6fd591e235c62f8893438e8d10431d/scala-library-2.10.5.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-lucene-index/2.2.1/ab69e1387e08b533244a06b7b54593b9927929a6/neo4j-lucene-index-2.2.1.jar
+2015-04-28 03:41:23.669+0000 INFO  [org.neo4j]: Library path:
+    C:\Program Files\Java\jre1.8.0_40\bin
+    C:\Windows\Sun\Java\bin
+    C:\Windows\System32
+    C:\Windows
+    C:\Program Files\Java\jre1.8.0_40\bin\server
+    C:\Program Files\Java\jre1.8.0_40\bin
+    C:\Program Files\Java\jre1.8.0_40\lib\amd64
+    C:\ProgramData\Oracle\Java\javapath
+    C:\Program Files\md5
+    C:\Program Files\Java\jdk1.8.0_40\bin
+    C:\Windows\System32
+    C:\Windows
+    C:\Windows\System32\wbem
+    C:\Windows\System32\WindowsPowerShell\v1.0
+    C:\Windows\System32\WindowsPowerShell\v1.0
+    C:\Program Files (x86)\QuickTime\QTSystem
+    C:\Program Files (x86)\Git\cmd
+    C:\Program Files (x86)\gradle-2.1\bin
+    C:\Program Files (x86)\Skype\Phone
+    C:\Users\bririche\AppData\Local\atom\bin
+    C:\Program Files\eclipse
+    C:\Users\bririche\workspace\workspace\JavaBuffer
+    C:\Users\bririche\workspace\workspace\JavaBuffer
+2015-04-28 03:41:23.674+0000 INFO  [org.neo4j]: System.properties:
+    sun.boot.library.path = C:\Program Files\Java\jre1.8.0_40\bin
+    path.separator = ;
+    file.encoding.pkg = sun.io
+    user.country = US
+    user.script = 
+    sun.java.launcher = SUN_STANDARD
+    sun.os.patch.level = Service Pack 1
+    user.dir = C:\Users\bririche\workspace\workspace\JavaBuffer
+    user.variant = 
+    sun.jnu.encoding = Cp1252
+    sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+    user.home = C:\Users\bririche
+    user.timezone = America/Chicago
+    file.encoding = Cp1252
+    user.name = bririche
+    sun.java.command = org.javabuffer.JavaBuffer
+    sun.arch.data.model = 64
+    user.language = en
+    awt.toolkit = sun.awt.windows.WToolkit
+    file.separator = \
+    sun.io.unicode.encoding = UnicodeLittle
+    sun.cpu.endian = little
+    sun.desktop = windows
+    sun.cpu.isalist = amd64
+2015-04-28 03:41:23.675+0000 INFO  [org.neo4j]: Network information:
+    Interface Software Loopback Interface 1:
+        address: 127.0.0.1
+        address: 0:0:0:0:0:0:0:1
+    Interface WAN Miniport (SSTP):
+    Interface WAN Miniport (L2TP):
+    Interface WAN Miniport (PPTP):
+    Interface WAN Miniport (PPPOE):
+    Interface WAN Miniport (IPv6):
+    Interface WAN Miniport (Network Monitor):
+    Interface WAN Miniport (IP):
+    Interface RAS Async Adapter:
+    Interface WAN Miniport (IKEv2):
+    Interface Intel(R) Ethernet Connection I217-LM:
+        address: fe80:0:0:0:988b:b4a5:98a5:7353%eth3
+    Interface Intel(R) Dual Band Wireless-AC 7260:
+        address: 192.168.1.76
+        address: 2602:306:325c:87e0:4c5a:48e0:9e5e:7fa5
+        address: 2602:306:325c:87e0:953b:d726:dbe2:1271
+        address: fe80:0:0:0:4c5a:48e0:9e5e:7fa5%wlan0
+    Interface Bluetooth Device (RFCOMM Protocol TDI):
+    Interface Bluetooth Device (Personal Area Network):
+    Interface Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64:
+    Interface Teredo Tunneling Pseudo-Interface:
+        address: 2001:0:9d38:6ab8:2c80:28db:3f57:feb3
+        address: fe80:0:0:0:2c80:28db:3f57:feb3%net5
+    Interface VirtualBox Host-Only Ethernet Adapter:
+        address: 192.168.56.1
+        address: fe80:0:0:0:6deb:d823:6ce:aea6%eth6
+    Interface Microsoft ISATAP Adapter #2:
+        address: fe80:0:0:0:0:5efe:c0a8:3801%net6
+    Interface Intel(R) Ethernet Connection I217-LM - VirtualBox Bridged Networking Driver Miniport:
+    Interface Intel(R) Dual Band Wireless-AC 7260 - VirtualBox Bridged Networking Driver Miniport:
+    Interface VMware Virtual Ethernet Adapter for VMnet1:
+        address: 192.168.233.1
+        address: fe80:0:0:0:411a:ec0b:c323:48b2%eth9
+    Interface VMware Virtual Ethernet Adapter for VMnet8:
+        address: 192.168.111.1
+        address: fe80:0:0:0:e418:e7e2:703f:5390%eth10
+    Interface Microsoft Virtual WiFi Miniport Adapter:
+        address: fe80:0:0:0:f486:17a:792c:cd04%wlan1
+    Interface Microsoft Virtual WiFi Miniport Adapter - VirtualBox Bridged Networking Driver Miniport:
+    Interface Microsoft ISATAP Adapter #5:
+        address: fe80:0:0:0:0:5efe:c0a8:6f01%net7
+    Interface Microsoft ISATAP Adapter #7:
+    Interface Microsoft ISATAP Adapter #3:
+        address: fe80:0:0:0:0:5efe:c0a8:14c%net9
+    Interface Intel(R) Dual Band Wireless-AC 7260 - VirtualBox Bridged Networking Driver Miniport-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter #6:
+        address: fe80:0:0:0:0:5efe:c0a8:e901%net10
+    Interface Microsoft 6to4 Adapter:
+    Interface Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64 - VirtualBox Bridged Networking Driver Miniport:
+    Interface Microsoft ISATAP Adapter:
+    Interface Microsoft 6to4 Adapter-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter #2-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter #3-McAfee NDIS Light-Weight Filter-0000:
+    Interface Intel(R) Dual Band Wireless-AC 7260 - VirtualBox Bridged Networking Driver Miniport-QoS Packet Scheduler-0000:
+    Interface Microsoft ISATAP Adapter #5-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter #6-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter #7-McAfee NDIS Light-Weight Filter-0000:
+    Interface Teredo Tunneling Pseudo-Interface-McAfee NDIS Light-Weight Filter-0000:
+    Interface Intel(R) Dual Band Wireless-AC 7260-Virtual WiFi Filter Driver-0000:
+    Interface WAN Miniport (Network Monitor)-McAfee NDIS Light-Weight Filter-0000:
+    Interface WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000:
+    Interface WAN Miniport (IP)-McAfee NDIS Light-Weight Filter-0000:
+    Interface WAN Miniport (IP)-QoS Packet Scheduler-0000:
+    Interface WAN Miniport (IPv6)-McAfee NDIS Light-Weight Filter-0000:
+    Interface WAN Miniport (IPv6)-QoS Packet Scheduler-0000:
+    Interface VirtualBox Host-Only Ethernet Adapter-McAfee NDIS Light-Weight Filter-0000:
+    Interface VirtualBox Host-Only Ethernet Adapter-QoS Packet Scheduler-0000:
+    Interface VirtualBox Host-Only Ethernet Adapter-WFP LightWeight Filter-0000:
+    Interface Intel(R) Dual Band Wireless-AC 7260 - VirtualBox Bridged Networking Driver Miniport-WFP LightWeight Filter-0000:
+    Interface Microsoft Virtual WiFi Miniport Adapter - VirtualBox Bridged Networking Driver Miniport-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft Virtual WiFi Miniport Adapter - VirtualBox Bridged Networking Driver Miniport-QoS Packet Scheduler-0000:
+    Interface Intel(R) Dual Band Wireless-AC 7260-Native WiFi Filter Driver-0000:
+    Interface Microsoft Virtual WiFi Miniport Adapter - VirtualBox Bridged Networking Driver Miniport-WFP LightWeight Filter-0000:
+    Interface Intel(R) Ethernet Connection I217-LM - VirtualBox Bridged Networking Driver Miniport-McAfee NDIS Light-Weight Filter-0000:
+    Interface Intel(R) Ethernet Connection I217-LM - VirtualBox Bridged Networking Driver Miniport-QoS Packet Scheduler-0000:
+    Interface Microsoft Virtual WiFi Miniport Adapter-Native WiFi Filter Driver-0000:
+    Interface Intel(R) Ethernet Connection I217-LM - VirtualBox Bridged Networking Driver Miniport-WFP LightWeight Filter-0000:
+2015-04-28 03:41:23.892+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics END ---
+2015-04-28 03:41:23.960+0000 INFO  [org.neo4j]: Opened logical log [db\data\neostore.transaction.db.2] version=2, lastTxId=4 (clean)
+2015-04-28 03:41:23.963+0000 INFO  [org.neo4j]: Kernel health set to OK
+2015-04-28 03:41:23.966+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions START ---
+2015-04-28 03:41:23.966+0000 INFO  [org.neo4j]: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId{creationTime=1430192362342, randomId=6264918822340514857, storeVersion=14969031248344582, upgradeTime=1430192362342, upgradeId=1}
+2015-04-28 03:41:23.966+0000 INFO  [org.neo4j]: Kernel version: Neo4j - Graph Database Kernel (neo4j-kernel), version: 2.2.1
+2015-04-28 03:41:23.966+0000 INFO  [org.neo4j]: Neo4j component versions:
+2015-04-28 03:41:23.970+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 1.9 (neo4j-cypher-compiler-1.9), version: 2.0.4; revision: 2.0.4:2.0-maint:130/4a7d10bc274a5d26a180bbe9df25100e8a694748
+2015-04-28 03:41:23.970+0000 INFO  [org.neo4j]:   Neo4j - Consistency Checker (neo4j-consistency-check), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:41:23.970+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.2 (neo4j-cypher-compiler-2.2), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:41:23.970+0000 INFO  [org.neo4j]:   Neo4j - Graph Database Kernel (neo4j-kernel), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:41:23.970+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.1 (neo4j-cypher-compiler-2.1), version: 2.1.7; revision: 2.1.7:2.1-maint:649/ed233fc1087f4549d1956b8ec4a504fe2f13a446
+2015-04-28 03:41:23.971+0000 INFO  [org.neo4j]:   Neo4j - Community (neo4j), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:41:23.971+0000 INFO  [org.neo4j]:   neo4j-udc, version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:41:23.971+0000 INFO  [org.neo4j]:   Neo4j - Lucene Index (neo4j-lucene-index), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:41:23.971+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.0 (neo4j-cypher-compiler-2.0), version: 2.0.4; revision: 2.0.4:2.0-maint:130/4a7d10bc274a5d26a180bbe9df25100e8a694748
+2015-04-28 03:41:23.971+0000 INFO  [org.neo4j]:   Neo4j - Graph Matching (neo4j-graph-matching), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:41:23.971+0000 INFO  [org.neo4j]:   Neo4j - JMX support (neo4j-jmx), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:41:23.971+0000 INFO  [org.neo4j]:   Neo4j - Cypher (neo4j-cypher), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:41:23.971+0000 INFO  [org.neo4j]:   Neo4j - Graph Algorithms (neo4j-graph-algo), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:41:23.971+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions END ---
+2015-04-28 03:41:23.971+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS START ---
+2015-04-28 03:41:23.971+0000 INFO  [org.neo4j]: Store versions:
+    Store versions:
+      NeoStore v0.A.5
+      SchemaStore v0.A.5
+      NodeStore v0.A.5
+      RelationshipStore v0.A.5
+      RelationshipTypeStore v0.A.5
+      LabelTokenStore v0.A.5
+      PropertyStore v0.A.5
+      PropertyIndexStore v0.A.5
+      StringPropertyStore v0.A.5
+      ArrayPropertyStore v0.A.5
+      RelationshipGroupStore v0.A.5
+2015-04-28 03:41:23.971+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS END ---
+2015-04-28 03:41:23.971+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE START ---
+2015-04-28 03:41:23.971+0000 INFO  [org.neo4j]: Id usage:
+    Id usage:
+      SchemaStore: used=1 high=0
+      NodeStore: used=2 high=1
+      RelationshipStore: used=0 high=-1
+      RelationshipTypeStore: used=0 high=-1
+      LabelTokenStore: used=0 high=-1
+      PropertyStore: used=2 high=1
+      PropertyIndexStore: used=1 high=0
+      StringPropertyStore: used=1 high=0
+      ArrayPropertyStore: used=1 high=0
+      RelationshipGroupStore: used=1 high=0
+2015-04-28 03:41:23.972+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE END ---
+2015-04-28 03:41:23.972+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles START ---
+2015-04-28 03:41:23.973+0000 INFO  [org.neo4j]: Disk space on partition (Total / Free / Free %): 255744888832 / 60976730112 / 23
+Storage files: (filename : modification date - size)
+      index:
+      - Total: 2015-04-27T22:39:22-0500 - 0.00 B
+      lock: 2015-04-27T22:41:23-0500 - 0.00 B
+      messages.log: 2015-04-27T22:40:58-0500 - 71.37 kB
+      neostore: 2015-04-27T22:41:23-0500 - 99.00 B
+      neostore.counts.db.a: 2015-04-27T22:40:58-0500 - 146.00 B
+      neostore.counts.db.b: 2015-04-27T22:39:24-0500 - 146.00 B
+      neostore.id: 2015-04-27T22:40:58-0500 - 9.00 B
+      neostore.labeltokenstore.db: 2015-04-27T22:41:23-0500 - 0.00 B
+      neostore.labeltokenstore.db.id: 2015-04-27T22:40:58-0500 - 9.00 B
+      neostore.labeltokenstore.db.names: 2015-04-27T22:41:23-0500 - 38.00 B
+      neostore.labeltokenstore.db.names.id: 2015-04-27T22:40:58-0500 - 9.00 B
+      neostore.nodestore.db: 2015-04-27T22:41:23-0500 - 30.00 B
+      neostore.nodestore.db.id: 2015-04-27T22:40:58-0500 - 9.00 B
+      neostore.nodestore.db.labels: 2015-04-27T22:41:23-0500 - 68.00 B
+      neostore.nodestore.db.labels.id: 2015-04-27T22:40:58-0500 - 9.00 B
+      neostore.propertystore.db: 2015-04-27T22:41:23-0500 - 82.00 B
+      neostore.propertystore.db.arrays: 2015-04-27T22:41:23-0500 - 128.00 B
+      neostore.propertystore.db.arrays.id: 2015-04-27T22:40:58-0500 - 9.00 B
+      neostore.propertystore.db.id: 2015-04-27T22:40:58-0500 - 9.00 B
+      neostore.propertystore.db.index: 2015-04-27T22:41:23-0500 - 9.00 B
+      neostore.propertystore.db.index.id: 2015-04-27T22:40:58-0500 - 9.00 B
+      neostore.propertystore.db.index.keys: 2015-04-27T22:41:23-0500 - 76.00 B
+      neostore.propertystore.db.index.keys.id: 2015-04-27T22:40:58-0500 - 9.00 B
+      neostore.propertystore.db.strings: 2015-04-27T22:41:23-0500 - 128.00 B
+      neostore.propertystore.db.strings.id: 2015-04-27T22:40:58-0500 - 9.00 B
+      neostore.relationshipgroupstore.db: 2015-04-27T22:41:23-0500 - 25.00 B
+      neostore.relationshipgroupstore.db.id: 2015-04-27T22:40:58-0500 - 9.00 B
+      neostore.relationshipstore.db: 2015-04-27T22:41:23-0500 - 0.00 B
+      neostore.relationshipstore.db.id: 2015-04-27T22:40:58-0500 - 9.00 B
+      neostore.relationshiptypestore.db: 2015-04-27T22:41:23-0500 - 0.00 B
+      neostore.relationshiptypestore.db.id: 2015-04-27T22:40:58-0500 - 9.00 B
+      neostore.relationshiptypestore.db.names: 2015-04-27T22:41:23-0500 - 38.00 B
+      neostore.relationshiptypestore.db.names.id: 2015-04-27T22:40:58-0500 - 9.00 B
+      neostore.schemastore.db: 2015-04-27T22:41:23-0500 - 64.00 B
+      neostore.schemastore.db.id: 2015-04-27T22:40:58-0500 - 9.00 B
+      neostore.transaction.db.0: 2015-04-27T22:39:24-0500 - 330.00 B
+      neostore.transaction.db.1: 2015-04-27T22:40:58-0500 - 225.00 B
+      neostore.transaction.db.2: 2015-04-27T22:41:23-0500 - 16.00 B
+      schema:
+        label:
+          lucene:
+            segments.gen: 2015-04-27T22:39:24-0500 - 20.00 B
+            segments_1: 2015-04-27T22:39:24-0500 - 32.00 B
+            write.lock: 2015-04-27T22:41:23-0500 - 0.00 B
+          - Total: 2015-04-27T22:41:23-0500 - 52.00 B
+        - Total: 2015-04-27T22:39:23-0500 - 52.00 B
+      - Total: 2015-04-27T22:39:23-0500 - 52.00 B
+      store_lock: 2015-04-27T22:39:22-0500 - 0.00 B
+2015-04-28 03:41:23.980+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles END ---
+2015-04-28 03:41:23.981+0000 INFO  [org.neo4j]: Database is now ready
+2015-04-28 03:41:24.001+0000 INFO  [org.neo4j]: Shutdown started
+2015-04-28 03:41:24.001+0000 INFO  [org.neo4j]: Database is now unavailable
+2015-04-28 03:41:24.001+0000 INFO  [org.neo4j]: About to rotate counts store at transaction 5 to [db\data\neostore.counts.db.b], from [db\data\neostore.counts.db.a].
+2015-04-28 03:41:24.006+0000 INFO  [org.neo4j]: Successfully rotated counts store at transaction 5 to [db\data\neostore.counts.db.b], from [db\data\neostore.counts.db.a].
+2015-04-28 03:41:24.230+0000 INFO  [org.neo4j]: NeoStore closed
+2015-04-28 03:41:24.231+0000 INFO  [org.neo4j]: --- STOPPING diagnostics START ---
+2015-04-28 03:41:24.231+0000 INFO  [org.neo4j]: --- STOPPING diagnostics END ---
+2015-04-28 03:43:15.797+0000 INFO  [org.neo4j]: You are using an unsupported version of the Java runtime. Please use Oracle(R) Java(TM) Runtime Environment 7 or OpenJDK(TM) 7.
+2015-04-28 03:43:15.927+0000 INFO  [org.neo4j]: No locking implementation specified, defaulting to 'community'
+2015-04-28 03:43:15.969+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics START ---
+2015-04-28 03:43:15.970+0000 INFO  [org.neo4j]: Neo4j Kernel properties:
+    store_dir=db/data
+    ephemeral=false
+2015-04-28 03:43:15.973+0000 INFO  [org.neo4j]: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    NETWORK
+2015-04-28 03:43:15.974+0000 INFO  [org.neo4j]: System memory information:
+    Total Physical memory: 15.63 GB
+    Free Physical memory: 11.59 GB
+    Committed virtual memory: 461.21 MB
+    Total swap space: 31.27 GB
+    Free swap space: 24.84 GB
+2015-04-28 03:43:15.975+0000 INFO  [org.neo4j]: JVM memory information:
+    Free  memory: 143.16 MB
+    Total memory: 241.50 MB
+    Max   memory: 3.48 GB
+    Garbage Collector: PS Scavenge: [PS Eden Space, PS Survivor Space]
+    Garbage Collector: PS MarkSweep: [PS Eden Space, PS Survivor Space, PS Old Gen]
+    Memory Pool: Code Cache (Non-heap memory): committed=3.38 MB, used=3.35 MB, max=240.00 MB, threshold=0.00 B
+    Memory Pool: Metaspace (Non-heap memory): committed=13.13 MB, used=12.59 MB, max=-1.00 B, threshold=0.00 B
+    Memory Pool: Compressed Class Space (Non-heap memory): committed=1.88 MB, used=1.67 MB, max=1.00 GB, threshold=0.00 B
+    Memory Pool: PS Eden Space (Heap memory): committed=63.00 MB, used=61.86 MB, max=1.28 GB, threshold=?
+    Memory Pool: PS Survivor Space (Heap memory): committed=10.50 MB, used=10.48 MB, max=10.50 MB, threshold=?
+    Memory Pool: PS Old Gen (Heap memory): committed=168.00 MB, used=26.00 MB, max=2.61 GB, threshold=0.00 B
+2015-04-28 03:43:15.977+0000 INFO  [org.neo4j]: Operating system information:
+    Operating System: Windows 7; version: 6.1; arch: amd64; cpus: 8
+    Process id: 10680@BRIRICHE-WS
+    Byte order: LITTLE_ENDIAN
+    Local timezone: America/Chicago
+2015-04-28 03:43:15.979+0000 INFO  [org.neo4j]: JVM information:
+    VM Name: Java HotSpot(TM) 64-Bit Server VM
+    VM Vendor: Oracle Corporation
+    VM Version: 25.40-b25
+    JIT compiler: HotSpot 64-Bit Tiered Compilers
+    VM Arguments: [-Dfile.encoding=Cp1252]
+2015-04-28 03:43:15.979+0000 INFO  [org.neo4j]: Java classpath:
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.2/c707664e020218f8529b9a5e55016ee15f0f82ac/log4j-core-2.2.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-core/3.6.2/9ec77e2507f9cc01756964c71d91efd8154a8c47/lucene-core-3.6.2.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/localedata.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.parboiled/parboiled-scala_2.10/1.1.7/c20d486f11cc115c0df2ebc2aefb2773f9f9fb11/parboiled-scala_2.10-1.1.7.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/access-bridge-64.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-csv/2.2.1/32a972a7da50831d8a83377d7833858c9ba50d03/neo4j-csv-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-primitive-collections/2.2.1/a17b85f6714b8d6078a0213e6eda5425201c7776/neo4j-primitive-collections-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-unsafe/2.2.1/29058160d20972dc5e386d6ca21e0c29b0c05168/neo4j-unsafe-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-kernel/2.2.1/7b6aa46bf07146ea6240ff6240da9827fbdde6ca/neo4j-kernel-2.2.1.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\jsse.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\charsets.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-compiler-1.9/2.0.4/93381595ffca5c8813eb65af32a910637dc0c408/neo4j-cypher-compiler-1.9-2.0.4.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\rt.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/net.sf.opencsv/opencsv/2.3/c23708cdb9e80a144db433e23344a788a1fd6599/opencsv-2.3.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/dnsns.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.2/d7ef6ad7ff0711dd12fe409d62d72d6ed14516e0/log4j-api-2.2.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/sunec.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-udc/2.2.1/51e3e10caebe09abcfecbbefc5aa712555a69951/neo4j-udc-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/workspace/workspace/JavaBuffer/bin/
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-graph-matching/2.2.1/3c4b77b51ad58cee1278beb691bb573ccb1312b6/neo4j-graph-matching-2.2.1.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\resources.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/jfxrt.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/zipfs.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-reflect/2.10.5/7392facb48876c67a89fcb086112b195f5f6bbc3/scala-reflect-2.10.5.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\jce.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-compiler-2.0/2.0.4/13277d9b4ae208ca1145210488502a80bbf20376/neo4j-cypher-compiler-2.0-2.0.4.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/com.googlecode.concurrentlinkedhashmap/concurrentlinkedhashmap-lru/1.4/d4b42ed76a166a81dbac613339eed3343be6bd2d/concurrentlinkedhashmap-lru-1.4.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-compiler-2.1/2.1.7/599ad633a098153150640484202f7c6c5b82766c/neo4j-cypher-compiler-2.1-2.1.7.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-consistency-check/2.2.1/61618073b9ffb65898f50e4976f3dd30fc1993c8/neo4j-consistency-check-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher/2.2.1/3f73a0f935586104b7fa93f38c4311a778dfc57d/neo4j-cypher-2.2.1.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\classes
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/com.codesnippets4all/quick-json/1.0.4/d71030f64dccafcf77aefb4c85edd63716855cd0/quick-json-1.0.4.jar
+     [classpath + loader.0] file:/C:/Users/bririche/workspace/workspace/JavaBuffer/sun-httpserver/
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/sunmscapi.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/sunpkcs11.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j/2.2.1/2193d074aabc4ab871fac2282b080edaf6233cc2/neo4j-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-io/2.2.1/6af91c60951c801e396007cdd101df000d7e8e96/neo4j-io-2.2.1.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/cldrdata.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/jaccess.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\jfr.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-graph-algo/2.2.1/c4e60af0e4767905fad83d57041a9d4677e4c6de/neo4j-graph-algo-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-compiler-2.2/2.2.1/7064a853a25cf99a92f0d092e498bb3ab3141ca6/neo4j-cypher-compiler-2.2-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-jmx/2.2.1/9a8cb004784c519e6478807937d7763791915e74/neo4j-jmx-2.2.1.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/sunjce_provider.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\sunrsasign.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/nashorn.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.parboiled/parboiled-core/1.1.7/a60ff9a54cbeb30ec44c89e16ac4c35913cbad5a/parboiled-core-1.1.7.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.10.5/57ac67a6cf6fd591e235c62f8893438e8d10431d/scala-library-2.10.5.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-lucene-index/2.2.1/ab69e1387e08b533244a06b7b54593b9927929a6/neo4j-lucene-index-2.2.1.jar
+2015-04-28 03:43:15.983+0000 INFO  [org.neo4j]: Library path:
+    C:\Program Files\Java\jre1.8.0_40\bin
+    C:\Windows\Sun\Java\bin
+    C:\Windows\System32
+    C:\Windows
+    C:\Program Files\Java\jre1.8.0_40\bin\server
+    C:\Program Files\Java\jre1.8.0_40\bin
+    C:\Program Files\Java\jre1.8.0_40\lib\amd64
+    C:\ProgramData\Oracle\Java\javapath
+    C:\Program Files\md5
+    C:\Program Files\Java\jdk1.8.0_40\bin
+    C:\Windows\System32
+    C:\Windows
+    C:\Windows\System32\wbem
+    C:\Windows\System32\WindowsPowerShell\v1.0
+    C:\Windows\System32\WindowsPowerShell\v1.0
+    C:\Program Files (x86)\QuickTime\QTSystem
+    C:\Program Files (x86)\Git\cmd
+    C:\Program Files (x86)\gradle-2.1\bin
+    C:\Program Files (x86)\Skype\Phone
+    C:\Users\bririche\AppData\Local\atom\bin
+    C:\Program Files\eclipse
+    C:\Users\bririche\workspace\workspace\JavaBuffer
+    C:\Users\bririche\workspace\workspace\JavaBuffer
+2015-04-28 03:43:15.988+0000 INFO  [org.neo4j]: System.properties:
+    sun.boot.library.path = C:\Program Files\Java\jre1.8.0_40\bin
+    path.separator = ;
+    file.encoding.pkg = sun.io
+    user.country = US
+    user.script = 
+    sun.java.launcher = SUN_STANDARD
+    sun.os.patch.level = Service Pack 1
+    user.dir = C:\Users\bririche\workspace\workspace\JavaBuffer
+    user.variant = 
+    sun.jnu.encoding = Cp1252
+    sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+    user.home = C:\Users\bririche
+    user.timezone = America/Chicago
+    file.encoding = Cp1252
+    user.name = bririche
+    sun.java.command = org.javabuffer.JavaBuffer
+    sun.arch.data.model = 64
+    user.language = en
+    awt.toolkit = sun.awt.windows.WToolkit
+    file.separator = \
+    sun.io.unicode.encoding = UnicodeLittle
+    sun.cpu.endian = little
+    sun.desktop = windows
+    sun.cpu.isalist = amd64
+2015-04-28 03:43:15.989+0000 INFO  [org.neo4j]: Network information:
+    Interface Software Loopback Interface 1:
+        address: 127.0.0.1
+        address: 0:0:0:0:0:0:0:1
+    Interface WAN Miniport (SSTP):
+    Interface WAN Miniport (L2TP):
+    Interface WAN Miniport (PPTP):
+    Interface WAN Miniport (PPPOE):
+    Interface WAN Miniport (IPv6):
+    Interface WAN Miniport (Network Monitor):
+    Interface WAN Miniport (IP):
+    Interface RAS Async Adapter:
+    Interface WAN Miniport (IKEv2):
+    Interface Intel(R) Ethernet Connection I217-LM:
+        address: fe80:0:0:0:988b:b4a5:98a5:7353%eth3
+    Interface Intel(R) Dual Band Wireless-AC 7260:
+        address: 192.168.1.76
+        address: 2602:306:325c:87e0:4c5a:48e0:9e5e:7fa5
+        address: 2602:306:325c:87e0:953b:d726:dbe2:1271
+        address: fe80:0:0:0:4c5a:48e0:9e5e:7fa5%wlan0
+    Interface Bluetooth Device (RFCOMM Protocol TDI):
+    Interface Bluetooth Device (Personal Area Network):
+    Interface Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64:
+    Interface Teredo Tunneling Pseudo-Interface:
+        address: 2001:0:9d38:6ab8:2c80:28db:3f57:feb3
+        address: fe80:0:0:0:2c80:28db:3f57:feb3%net5
+    Interface VirtualBox Host-Only Ethernet Adapter:
+        address: 192.168.56.1
+        address: fe80:0:0:0:6deb:d823:6ce:aea6%eth6
+    Interface Microsoft ISATAP Adapter #2:
+        address: fe80:0:0:0:0:5efe:c0a8:3801%net6
+    Interface Intel(R) Ethernet Connection I217-LM - VirtualBox Bridged Networking Driver Miniport:
+    Interface Intel(R) Dual Band Wireless-AC 7260 - VirtualBox Bridged Networking Driver Miniport:
+    Interface VMware Virtual Ethernet Adapter for VMnet1:
+        address: 192.168.233.1
+        address: fe80:0:0:0:411a:ec0b:c323:48b2%eth9
+    Interface VMware Virtual Ethernet Adapter for VMnet8:
+        address: 192.168.111.1
+        address: fe80:0:0:0:e418:e7e2:703f:5390%eth10
+    Interface Microsoft Virtual WiFi Miniport Adapter:
+        address: fe80:0:0:0:f486:17a:792c:cd04%wlan1
+    Interface Microsoft Virtual WiFi Miniport Adapter - VirtualBox Bridged Networking Driver Miniport:
+    Interface Microsoft ISATAP Adapter #5:
+        address: fe80:0:0:0:0:5efe:c0a8:6f01%net7
+    Interface Microsoft ISATAP Adapter #7:
+    Interface Microsoft ISATAP Adapter #3:
+        address: fe80:0:0:0:0:5efe:c0a8:14c%net9
+    Interface Intel(R) Dual Band Wireless-AC 7260 - VirtualBox Bridged Networking Driver Miniport-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter #6:
+        address: fe80:0:0:0:0:5efe:c0a8:e901%net10
+    Interface Microsoft 6to4 Adapter:
+    Interface Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64 - VirtualBox Bridged Networking Driver Miniport:
+    Interface Microsoft ISATAP Adapter:
+    Interface Microsoft 6to4 Adapter-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter #2-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter #3-McAfee NDIS Light-Weight Filter-0000:
+    Interface Intel(R) Dual Band Wireless-AC 7260 - VirtualBox Bridged Networking Driver Miniport-QoS Packet Scheduler-0000:
+    Interface Microsoft ISATAP Adapter #5-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter #6-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter #7-McAfee NDIS Light-Weight Filter-0000:
+    Interface Teredo Tunneling Pseudo-Interface-McAfee NDIS Light-Weight Filter-0000:
+    Interface Intel(R) Dual Band Wireless-AC 7260-Virtual WiFi Filter Driver-0000:
+    Interface WAN Miniport (Network Monitor)-McAfee NDIS Light-Weight Filter-0000:
+    Interface WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000:
+    Interface WAN Miniport (IP)-McAfee NDIS Light-Weight Filter-0000:
+    Interface WAN Miniport (IP)-QoS Packet Scheduler-0000:
+    Interface WAN Miniport (IPv6)-McAfee NDIS Light-Weight Filter-0000:
+    Interface WAN Miniport (IPv6)-QoS Packet Scheduler-0000:
+    Interface VirtualBox Host-Only Ethernet Adapter-McAfee NDIS Light-Weight Filter-0000:
+    Interface VirtualBox Host-Only Ethernet Adapter-QoS Packet Scheduler-0000:
+    Interface VirtualBox Host-Only Ethernet Adapter-WFP LightWeight Filter-0000:
+    Interface Intel(R) Dual Band Wireless-AC 7260 - VirtualBox Bridged Networking Driver Miniport-WFP LightWeight Filter-0000:
+    Interface Microsoft Virtual WiFi Miniport Adapter - VirtualBox Bridged Networking Driver Miniport-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft Virtual WiFi Miniport Adapter - VirtualBox Bridged Networking Driver Miniport-QoS Packet Scheduler-0000:
+    Interface Intel(R) Dual Band Wireless-AC 7260-Native WiFi Filter Driver-0000:
+    Interface Microsoft Virtual WiFi Miniport Adapter - VirtualBox Bridged Networking Driver Miniport-WFP LightWeight Filter-0000:
+    Interface Intel(R) Ethernet Connection I217-LM - VirtualBox Bridged Networking Driver Miniport-McAfee NDIS Light-Weight Filter-0000:
+    Interface Intel(R) Ethernet Connection I217-LM - VirtualBox Bridged Networking Driver Miniport-QoS Packet Scheduler-0000:
+    Interface Microsoft Virtual WiFi Miniport Adapter-Native WiFi Filter Driver-0000:
+    Interface Intel(R) Ethernet Connection I217-LM - VirtualBox Bridged Networking Driver Miniport-WFP LightWeight Filter-0000:
+2015-04-28 03:43:16.209+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics END ---
+2015-04-28 03:43:16.587+0000 INFO  [org.neo4j]: Opened logical log [db\data\neostore.transaction.db.3] version=3, lastTxId=5 (clean)
+2015-04-28 03:43:16.596+0000 INFO  [org.neo4j]: Kernel health set to OK
+2015-04-28 03:43:17.166+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions START ---
+2015-04-28 03:43:17.166+0000 INFO  [org.neo4j]: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId{creationTime=1430192362342, randomId=6264918822340514857, storeVersion=14969031248344582, upgradeTime=1430192362342, upgradeId=1}
+2015-04-28 03:43:17.166+0000 INFO  [org.neo4j]: Kernel version: Neo4j - Graph Database Kernel (neo4j-kernel), version: 2.2.1
+2015-04-28 03:43:17.167+0000 INFO  [org.neo4j]: Neo4j component versions:
+2015-04-28 03:43:17.169+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 1.9 (neo4j-cypher-compiler-1.9), version: 2.0.4; revision: 2.0.4:2.0-maint:130/4a7d10bc274a5d26a180bbe9df25100e8a694748
+2015-04-28 03:43:17.169+0000 INFO  [org.neo4j]:   Neo4j - Consistency Checker (neo4j-consistency-check), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:43:17.170+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.2 (neo4j-cypher-compiler-2.2), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:43:17.170+0000 INFO  [org.neo4j]:   Neo4j - Graph Database Kernel (neo4j-kernel), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:43:17.170+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.1 (neo4j-cypher-compiler-2.1), version: 2.1.7; revision: 2.1.7:2.1-maint:649/ed233fc1087f4549d1956b8ec4a504fe2f13a446
+2015-04-28 03:43:17.170+0000 INFO  [org.neo4j]:   Neo4j - Community (neo4j), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:43:17.170+0000 INFO  [org.neo4j]:   neo4j-udc, version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:43:17.170+0000 INFO  [org.neo4j]:   Neo4j - Lucene Index (neo4j-lucene-index), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:43:17.170+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.0 (neo4j-cypher-compiler-2.0), version: 2.0.4; revision: 2.0.4:2.0-maint:130/4a7d10bc274a5d26a180bbe9df25100e8a694748
+2015-04-28 03:43:17.170+0000 INFO  [org.neo4j]:   Neo4j - Graph Matching (neo4j-graph-matching), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:43:17.170+0000 INFO  [org.neo4j]:   Neo4j - JMX support (neo4j-jmx), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:43:17.170+0000 INFO  [org.neo4j]:   Neo4j - Cypher (neo4j-cypher), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:43:17.170+0000 INFO  [org.neo4j]:   Neo4j - Graph Algorithms (neo4j-graph-algo), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:43:17.171+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions END ---
+2015-04-28 03:43:17.172+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS START ---
+2015-04-28 03:43:17.172+0000 INFO  [org.neo4j]: Store versions:
+    Store versions:
+      NeoStore v0.A.5
+      SchemaStore v0.A.5
+      NodeStore v0.A.5
+      RelationshipStore v0.A.5
+      RelationshipTypeStore v0.A.5
+      LabelTokenStore v0.A.5
+      PropertyStore v0.A.5
+      PropertyIndexStore v0.A.5
+      StringPropertyStore v0.A.5
+      ArrayPropertyStore v0.A.5
+      RelationshipGroupStore v0.A.5
+2015-04-28 03:43:17.172+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS END ---
+2015-04-28 03:43:17.172+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE START ---
+2015-04-28 03:43:17.173+0000 INFO  [org.neo4j]: Id usage:
+    Id usage:
+      SchemaStore: used=1 high=0
+      NodeStore: used=3 high=2
+      RelationshipStore: used=0 high=-1
+      RelationshipTypeStore: used=0 high=-1
+      LabelTokenStore: used=0 high=-1
+      PropertyStore: used=3 high=2
+      PropertyIndexStore: used=1 high=0
+      StringPropertyStore: used=1 high=0
+      ArrayPropertyStore: used=1 high=0
+      RelationshipGroupStore: used=1 high=0
+2015-04-28 03:43:17.173+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE END ---
+2015-04-28 03:43:17.173+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles START ---
+2015-04-28 03:43:17.175+0000 INFO  [org.neo4j]: Disk space on partition (Total / Free / Free %): 255744888832 / 60976091136 / 23
+Storage files: (filename : modification date - size)
+      index:
+      - Total: 2015-04-27T22:39:22-0500 - 0.00 B
+      lock: 2015-04-27T22:43:16-0500 - 0.00 B
+      messages.log: 2015-04-27T22:41:24-0500 - 96.53 kB
+      neostore: 2015-04-27T22:43:16-0500 - 99.00 B
+      neostore.counts.db.a: 2015-04-27T22:40:58-0500 - 146.00 B
+      neostore.counts.db.b: 2015-04-27T22:41:24-0500 - 146.00 B
+      neostore.id: 2015-04-27T22:41:24-0500 - 9.00 B
+      neostore.labeltokenstore.db: 2015-04-27T22:43:16-0500 - 0.00 B
+      neostore.labeltokenstore.db.id: 2015-04-27T22:41:24-0500 - 9.00 B
+      neostore.labeltokenstore.db.names: 2015-04-27T22:43:16-0500 - 38.00 B
+      neostore.labeltokenstore.db.names.id: 2015-04-27T22:41:24-0500 - 9.00 B
+      neostore.nodestore.db: 2015-04-27T22:43:16-0500 - 45.00 B
+      neostore.nodestore.db.id: 2015-04-27T22:41:24-0500 - 9.00 B
+      neostore.nodestore.db.labels: 2015-04-27T22:43:16-0500 - 68.00 B
+      neostore.nodestore.db.labels.id: 2015-04-27T22:41:24-0500 - 9.00 B
+      neostore.propertystore.db: 2015-04-27T22:43:16-0500 - 123.00 B
+      neostore.propertystore.db.arrays: 2015-04-27T22:43:16-0500 - 128.00 B
+      neostore.propertystore.db.arrays.id: 2015-04-27T22:41:24-0500 - 9.00 B
+      neostore.propertystore.db.id: 2015-04-27T22:41:24-0500 - 9.00 B
+      neostore.propertystore.db.index: 2015-04-27T22:43:16-0500 - 9.00 B
+      neostore.propertystore.db.index.id: 2015-04-27T22:41:24-0500 - 9.00 B
+      neostore.propertystore.db.index.keys: 2015-04-27T22:43:16-0500 - 76.00 B
+      neostore.propertystore.db.index.keys.id: 2015-04-27T22:41:24-0500 - 9.00 B
+      neostore.propertystore.db.strings: 2015-04-27T22:43:16-0500 - 128.00 B
+      neostore.propertystore.db.strings.id: 2015-04-27T22:39:24-0500 - 9.00 B
+      neostore.relationshipgroupstore.db: 2015-04-27T22:43:16-0500 - 25.00 B
+      neostore.relationshipgroupstore.db.id: 2015-04-27T22:41:24-0500 - 9.00 B
+      neostore.relationshipstore.db: 2015-04-27T22:43:16-0500 - 0.00 B
+      neostore.relationshipstore.db.id: 2015-04-27T22:41:24-0500 - 9.00 B
+      neostore.relationshiptypestore.db: 2015-04-27T22:43:16-0500 - 0.00 B
+      neostore.relationshiptypestore.db.id: 2015-04-27T22:39:24-0500 - 9.00 B
+      neostore.relationshiptypestore.db.names: 2015-04-27T22:43:16-0500 - 38.00 B
+      neostore.relationshiptypestore.db.names.id: 2015-04-27T22:41:24-0500 - 9.00 B
+      neostore.schemastore.db: 2015-04-27T22:43:16-0500 - 64.00 B
+      neostore.schemastore.db.id: 2015-04-27T22:41:24-0500 - 9.00 B
+      neostore.transaction.db.0: 2015-04-27T22:39:24-0500 - 330.00 B
+      neostore.transaction.db.1: 2015-04-27T22:40:58-0500 - 225.00 B
+      neostore.transaction.db.2: 2015-04-27T22:41:23-0500 - 225.00 B
+      neostore.transaction.db.3: 2015-04-27T22:43:16-0500 - 16.00 B
+      schema:
+        label:
+          lucene:
+            segments.gen: 2015-04-27T22:39:24-0500 - 20.00 B
+            segments_1: 2015-04-27T22:39:24-0500 - 32.00 B
+            write.lock: 2015-04-27T22:43:16-0500 - 0.00 B
+          - Total: 2015-04-27T22:43:16-0500 - 52.00 B
+        - Total: 2015-04-27T22:39:23-0500 - 52.00 B
+      - Total: 2015-04-27T22:39:23-0500 - 52.00 B
+      store_lock: 2015-04-27T22:39:22-0500 - 0.00 B
+2015-04-28 03:43:17.185+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles END ---
+2015-04-28 03:43:17.219+0000 INFO  [org.neo4j]: Database is now ready
+2015-04-28 03:43:17.958+0000 INFO  [org.neo4j]: Shutdown started
+2015-04-28 03:43:17.958+0000 INFO  [org.neo4j]: Database is now unavailable
+2015-04-28 03:43:17.963+0000 INFO  [org.neo4j]: About to rotate counts store at transaction 6 to [db\data\neostore.counts.db.a], from [db\data\neostore.counts.db.b].
+2015-04-28 03:43:17.970+0000 INFO  [org.neo4j]: Successfully rotated counts store at transaction 6 to [db\data\neostore.counts.db.a], from [db\data\neostore.counts.db.b].
+2015-04-28 03:43:18.202+0000 INFO  [org.neo4j]: NeoStore closed
+2015-04-28 03:43:18.202+0000 INFO  [org.neo4j]: --- STOPPING diagnostics START ---
+2015-04-28 03:43:18.202+0000 INFO  [org.neo4j]: --- STOPPING diagnostics END ---
+2015-04-28 03:43:18.221+0000 INFO  [org.neo4j]: You are using an unsupported version of the Java runtime. Please use Oracle(R) Java(TM) Runtime Environment 7 or OpenJDK(TM) 7.
+2015-04-28 03:43:18.642+0000 INFO  [org.neo4j]: No locking implementation specified, defaulting to 'community'
+2015-04-28 03:43:18.643+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics START ---
+2015-04-28 03:43:18.643+0000 INFO  [org.neo4j]: Neo4j Kernel properties:
+    store_dir=db/data
+    ephemeral=false
+2015-04-28 03:43:18.643+0000 INFO  [org.neo4j]: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    NETWORK
+2015-04-28 03:43:18.643+0000 INFO  [org.neo4j]: System memory information:
+    Total Physical memory: 15.63 GB
+    Free Physical memory: 11.28 GB
+    Committed virtual memory: 1010.15 MB
+    Total swap space: 31.27 GB
+    Free swap space: 24.30 GB
+2015-04-28 03:43:18.644+0000 INFO  [org.neo4j]: JVM memory information:
+    Free  memory: 341.35 MB
+    Total memory: 452.50 MB
+    Max   memory: 3.48 GB
+    Garbage Collector: PS Scavenge: [PS Eden Space, PS Survivor Space]
+    Garbage Collector: PS MarkSweep: [PS Eden Space, PS Survivor Space, PS Old Gen]
+    Memory Pool: Code Cache (Non-heap memory): committed=5.56 MB, used=5.53 MB, max=240.00 MB, threshold=0.00 B
+    Memory Pool: Metaspace (Non-heap memory): committed=32.75 MB, used=32.30 MB, max=-1.00 B, threshold=0.00 B
+    Memory Pool: Compressed Class Space (Non-heap memory): committed=5.75 MB, used=5.63 MB, max=1.00 GB, threshold=0.00 B
+    Memory Pool: PS Eden Space (Heap memory): committed=125.00 MB, used=17.78 MB, max=1.19 GB, threshold=?
+    Memory Pool: PS Survivor Space (Heap memory): committed=10.50 MB, used=0.00 B, max=10.50 MB, threshold=?
+    Memory Pool: PS Old Gen (Heap memory): committed=317.00 MB, used=93.37 MB, max=2.61 GB, threshold=0.00 B
+2015-04-28 03:43:18.645+0000 INFO  [org.neo4j]: Operating system information:
+    Operating System: Windows 7; version: 6.1; arch: amd64; cpus: 8
+    Process id: 10680@BRIRICHE-WS
+    Byte order: LITTLE_ENDIAN
+    Local timezone: America/Chicago
+2015-04-28 03:43:18.646+0000 INFO  [org.neo4j]: JVM information:
+    VM Name: Java HotSpot(TM) 64-Bit Server VM
+    VM Vendor: Oracle Corporation
+    VM Version: 25.40-b25
+    JIT compiler: HotSpot 64-Bit Tiered Compilers
+    VM Arguments: [-Dfile.encoding=Cp1252]
+2015-04-28 03:43:18.646+0000 INFO  [org.neo4j]: Java classpath:
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.2/c707664e020218f8529b9a5e55016ee15f0f82ac/log4j-core-2.2.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-core/3.6.2/9ec77e2507f9cc01756964c71d91efd8154a8c47/lucene-core-3.6.2.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/localedata.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.parboiled/parboiled-scala_2.10/1.1.7/c20d486f11cc115c0df2ebc2aefb2773f9f9fb11/parboiled-scala_2.10-1.1.7.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/access-bridge-64.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-csv/2.2.1/32a972a7da50831d8a83377d7833858c9ba50d03/neo4j-csv-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-primitive-collections/2.2.1/a17b85f6714b8d6078a0213e6eda5425201c7776/neo4j-primitive-collections-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-unsafe/2.2.1/29058160d20972dc5e386d6ca21e0c29b0c05168/neo4j-unsafe-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-kernel/2.2.1/7b6aa46bf07146ea6240ff6240da9827fbdde6ca/neo4j-kernel-2.2.1.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\jsse.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\charsets.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-compiler-1.9/2.0.4/93381595ffca5c8813eb65af32a910637dc0c408/neo4j-cypher-compiler-1.9-2.0.4.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\rt.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/net.sf.opencsv/opencsv/2.3/c23708cdb9e80a144db433e23344a788a1fd6599/opencsv-2.3.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/dnsns.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.2/d7ef6ad7ff0711dd12fe409d62d72d6ed14516e0/log4j-api-2.2.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/sunec.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-udc/2.2.1/51e3e10caebe09abcfecbbefc5aa712555a69951/neo4j-udc-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/workspace/workspace/JavaBuffer/bin/
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-graph-matching/2.2.1/3c4b77b51ad58cee1278beb691bb573ccb1312b6/neo4j-graph-matching-2.2.1.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\resources.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/jfxrt.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/zipfs.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-reflect/2.10.5/7392facb48876c67a89fcb086112b195f5f6bbc3/scala-reflect-2.10.5.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\jce.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-compiler-2.0/2.0.4/13277d9b4ae208ca1145210488502a80bbf20376/neo4j-cypher-compiler-2.0-2.0.4.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/com.googlecode.concurrentlinkedhashmap/concurrentlinkedhashmap-lru/1.4/d4b42ed76a166a81dbac613339eed3343be6bd2d/concurrentlinkedhashmap-lru-1.4.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-compiler-2.1/2.1.7/599ad633a098153150640484202f7c6c5b82766c/neo4j-cypher-compiler-2.1-2.1.7.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-consistency-check/2.2.1/61618073b9ffb65898f50e4976f3dd30fc1993c8/neo4j-consistency-check-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher/2.2.1/3f73a0f935586104b7fa93f38c4311a778dfc57d/neo4j-cypher-2.2.1.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\classes
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/com.codesnippets4all/quick-json/1.0.4/d71030f64dccafcf77aefb4c85edd63716855cd0/quick-json-1.0.4.jar
+     [classpath + loader.0] file:/C:/Users/bririche/workspace/workspace/JavaBuffer/sun-httpserver/
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/sunmscapi.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/sunpkcs11.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j/2.2.1/2193d074aabc4ab871fac2282b080edaf6233cc2/neo4j-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-io/2.2.1/6af91c60951c801e396007cdd101df000d7e8e96/neo4j-io-2.2.1.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/cldrdata.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/jaccess.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\jfr.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-graph-algo/2.2.1/c4e60af0e4767905fad83d57041a9d4677e4c6de/neo4j-graph-algo-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-cypher-compiler-2.2/2.2.1/7064a853a25cf99a92f0d092e498bb3ab3141ca6/neo4j-cypher-compiler-2.2-2.2.1.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-jmx/2.2.1/9a8cb004784c519e6478807937d7763791915e74/neo4j-jmx-2.2.1.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/sunjce_provider.jar
+     [bootstrap] C:\Program Files\Java\jre1.8.0_40\lib\sunrsasign.jar
+     [loader.1] file:/C:/Program%20Files/Java/jre1.8.0_40/lib/ext/nashorn.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.parboiled/parboiled-core/1.1.7/a60ff9a54cbeb30ec44c89e16ac4c35913cbad5a/parboiled-core-1.1.7.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.10.5/57ac67a6cf6fd591e235c62f8893438e8d10431d/scala-library-2.10.5.jar
+     [classpath + loader.0] file:/C:/Users/bririche/.gradle/caches/modules-2/files-2.1/org.neo4j/neo4j-lucene-index/2.2.1/ab69e1387e08b533244a06b7b54593b9927929a6/neo4j-lucene-index-2.2.1.jar
+2015-04-28 03:43:18.666+0000 INFO  [org.neo4j]: Library path:
+    C:\Program Files\Java\jre1.8.0_40\bin
+    C:\Windows\Sun\Java\bin
+    C:\Windows\System32
+    C:\Windows
+    C:\Program Files\Java\jre1.8.0_40\bin\server
+    C:\Program Files\Java\jre1.8.0_40\bin
+    C:\Program Files\Java\jre1.8.0_40\lib\amd64
+    C:\ProgramData\Oracle\Java\javapath
+    C:\Program Files\md5
+    C:\Program Files\Java\jdk1.8.0_40\bin
+    C:\Windows\System32
+    C:\Windows
+    C:\Windows\System32\wbem
+    C:\Windows\System32\WindowsPowerShell\v1.0
+    C:\Windows\System32\WindowsPowerShell\v1.0
+    C:\Program Files (x86)\QuickTime\QTSystem
+    C:\Program Files (x86)\Git\cmd
+    C:\Program Files (x86)\gradle-2.1\bin
+    C:\Program Files (x86)\Skype\Phone
+    C:\Users\bririche\AppData\Local\atom\bin
+    C:\Program Files\eclipse
+    C:\Users\bririche\workspace\workspace\JavaBuffer
+    C:\Users\bririche\workspace\workspace\JavaBuffer
+2015-04-28 03:43:18.672+0000 INFO  [org.neo4j]: System.properties:
+    sun.boot.library.path = C:\Program Files\Java\jre1.8.0_40\bin
+    path.separator = ;
+    file.encoding.pkg = sun.io
+    user.country = US
+    user.script = 
+    sun.java.launcher = SUN_STANDARD
+    sun.os.patch.level = Service Pack 1
+    user.dir = C:\Users\bririche\workspace\workspace\JavaBuffer
+    user.variant = 
+    sun.jnu.encoding = Cp1252
+    sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+    user.home = C:\Users\bririche
+    user.timezone = America/Chicago
+    file.encoding = Cp1252
+    user.name = bririche
+    sun.java.command = org.javabuffer.JavaBuffer
+    sun.arch.data.model = 64
+    user.language = en
+    awt.toolkit = sun.awt.windows.WToolkit
+    file.separator = \
+    sun.io.unicode.encoding = UnicodeLittle
+    sun.cpu.endian = little
+    sun.desktop = windows
+    sun.cpu.isalist = amd64
+2015-04-28 03:43:18.672+0000 INFO  [org.neo4j]: Network information:
+    Interface Software Loopback Interface 1:
+        address: 127.0.0.1
+        address: 0:0:0:0:0:0:0:1
+    Interface WAN Miniport (SSTP):
+    Interface WAN Miniport (L2TP):
+    Interface WAN Miniport (PPTP):
+    Interface WAN Miniport (PPPOE):
+    Interface WAN Miniport (IPv6):
+    Interface WAN Miniport (Network Monitor):
+    Interface WAN Miniport (IP):
+    Interface RAS Async Adapter:
+    Interface WAN Miniport (IKEv2):
+    Interface Intel(R) Ethernet Connection I217-LM:
+        address: fe80:0:0:0:988b:b4a5:98a5:7353%eth3
+    Interface Intel(R) Dual Band Wireless-AC 7260:
+        address: 192.168.1.76
+        address: 2602:306:325c:87e0:4c5a:48e0:9e5e:7fa5
+        address: 2602:306:325c:87e0:953b:d726:dbe2:1271
+        address: fe80:0:0:0:4c5a:48e0:9e5e:7fa5%wlan0
+    Interface Bluetooth Device (RFCOMM Protocol TDI):
+    Interface Bluetooth Device (Personal Area Network):
+    Interface Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64:
+    Interface Teredo Tunneling Pseudo-Interface:
+        address: 2001:0:9d38:6ab8:2c80:28db:3f57:feb3
+        address: fe80:0:0:0:2c80:28db:3f57:feb3%net5
+    Interface VirtualBox Host-Only Ethernet Adapter:
+        address: 192.168.56.1
+        address: fe80:0:0:0:6deb:d823:6ce:aea6%eth6
+    Interface Microsoft ISATAP Adapter #2:
+        address: fe80:0:0:0:0:5efe:c0a8:3801%net6
+    Interface Intel(R) Ethernet Connection I217-LM - VirtualBox Bridged Networking Driver Miniport:
+    Interface Intel(R) Dual Band Wireless-AC 7260 - VirtualBox Bridged Networking Driver Miniport:
+    Interface VMware Virtual Ethernet Adapter for VMnet1:
+        address: 192.168.233.1
+        address: fe80:0:0:0:411a:ec0b:c323:48b2%eth9
+    Interface VMware Virtual Ethernet Adapter for VMnet8:
+        address: 192.168.111.1
+        address: fe80:0:0:0:e418:e7e2:703f:5390%eth10
+    Interface Microsoft Virtual WiFi Miniport Adapter:
+        address: fe80:0:0:0:f486:17a:792c:cd04%wlan1
+    Interface Microsoft Virtual WiFi Miniport Adapter - VirtualBox Bridged Networking Driver Miniport:
+    Interface Microsoft ISATAP Adapter #5:
+        address: fe80:0:0:0:0:5efe:c0a8:6f01%net7
+    Interface Microsoft ISATAP Adapter #7:
+    Interface Microsoft ISATAP Adapter #3:
+        address: fe80:0:0:0:0:5efe:c0a8:14c%net9
+    Interface Intel(R) Dual Band Wireless-AC 7260 - VirtualBox Bridged Networking Driver Miniport-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter #6:
+        address: fe80:0:0:0:0:5efe:c0a8:e901%net10
+    Interface Microsoft 6to4 Adapter:
+    Interface Cisco AnyConnect Secure Mobility Client Virtual Miniport Adapter for Windows x64 - VirtualBox Bridged Networking Driver Miniport:
+    Interface Microsoft ISATAP Adapter:
+    Interface Microsoft 6to4 Adapter-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter #2-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter #3-McAfee NDIS Light-Weight Filter-0000:
+    Interface Intel(R) Dual Band Wireless-AC 7260 - VirtualBox Bridged Networking Driver Miniport-QoS Packet Scheduler-0000:
+    Interface Microsoft ISATAP Adapter #5-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter #6-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft ISATAP Adapter #7-McAfee NDIS Light-Weight Filter-0000:
+    Interface Teredo Tunneling Pseudo-Interface-McAfee NDIS Light-Weight Filter-0000:
+    Interface Intel(R) Dual Band Wireless-AC 7260-Virtual WiFi Filter Driver-0000:
+    Interface WAN Miniport (Network Monitor)-McAfee NDIS Light-Weight Filter-0000:
+    Interface WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000:
+    Interface WAN Miniport (IP)-McAfee NDIS Light-Weight Filter-0000:
+    Interface WAN Miniport (IP)-QoS Packet Scheduler-0000:
+    Interface WAN Miniport (IPv6)-McAfee NDIS Light-Weight Filter-0000:
+    Interface WAN Miniport (IPv6)-QoS Packet Scheduler-0000:
+    Interface VirtualBox Host-Only Ethernet Adapter-McAfee NDIS Light-Weight Filter-0000:
+    Interface VirtualBox Host-Only Ethernet Adapter-QoS Packet Scheduler-0000:
+    Interface VirtualBox Host-Only Ethernet Adapter-WFP LightWeight Filter-0000:
+    Interface Intel(R) Dual Band Wireless-AC 7260 - VirtualBox Bridged Networking Driver Miniport-WFP LightWeight Filter-0000:
+    Interface Microsoft Virtual WiFi Miniport Adapter - VirtualBox Bridged Networking Driver Miniport-McAfee NDIS Light-Weight Filter-0000:
+    Interface Microsoft Virtual WiFi Miniport Adapter - VirtualBox Bridged Networking Driver Miniport-QoS Packet Scheduler-0000:
+    Interface Intel(R) Dual Band Wireless-AC 7260-Native WiFi Filter Driver-0000:
+    Interface Microsoft Virtual WiFi Miniport Adapter - VirtualBox Bridged Networking Driver Miniport-WFP LightWeight Filter-0000:
+    Interface Intel(R) Ethernet Connection I217-LM - VirtualBox Bridged Networking Driver Miniport-McAfee NDIS Light-Weight Filter-0000:
+    Interface Intel(R) Ethernet Connection I217-LM - VirtualBox Bridged Networking Driver Miniport-QoS Packet Scheduler-0000:
+    Interface Microsoft Virtual WiFi Miniport Adapter-Native WiFi Filter Driver-0000:
+    Interface Intel(R) Ethernet Connection I217-LM - VirtualBox Bridged Networking Driver Miniport-WFP LightWeight Filter-0000:
+2015-04-28 03:43:18.898+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics END ---
+2015-04-28 03:43:18.983+0000 INFO  [org.neo4j]: Opened logical log [db\data\neostore.transaction.db.4] version=4, lastTxId=6 (clean)
+2015-04-28 03:43:18.986+0000 INFO  [org.neo4j]: Kernel health set to OK
+2015-04-28 03:43:18.990+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions START ---
+2015-04-28 03:43:18.990+0000 INFO  [org.neo4j]: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId{creationTime=1430192362342, randomId=6264918822340514857, storeVersion=14969031248344582, upgradeTime=1430192362342, upgradeId=1}
+2015-04-28 03:43:18.990+0000 INFO  [org.neo4j]: Kernel version: Neo4j - Graph Database Kernel (neo4j-kernel), version: 2.2.1
+2015-04-28 03:43:18.990+0000 INFO  [org.neo4j]: Neo4j component versions:
+2015-04-28 03:43:18.992+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 1.9 (neo4j-cypher-compiler-1.9), version: 2.0.4; revision: 2.0.4:2.0-maint:130/4a7d10bc274a5d26a180bbe9df25100e8a694748
+2015-04-28 03:43:18.992+0000 INFO  [org.neo4j]:   Neo4j - Consistency Checker (neo4j-consistency-check), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:43:18.993+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.2 (neo4j-cypher-compiler-2.2), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:43:18.993+0000 INFO  [org.neo4j]:   Neo4j - Graph Database Kernel (neo4j-kernel), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:43:18.993+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.1 (neo4j-cypher-compiler-2.1), version: 2.1.7; revision: 2.1.7:2.1-maint:649/ed233fc1087f4549d1956b8ec4a504fe2f13a446
+2015-04-28 03:43:18.993+0000 INFO  [org.neo4j]:   Neo4j - Community (neo4j), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:43:18.993+0000 INFO  [org.neo4j]:   neo4j-udc, version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:43:18.993+0000 INFO  [org.neo4j]:   Neo4j - Lucene Index (neo4j-lucene-index), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:43:18.993+0000 INFO  [org.neo4j]:   Neo4j - Cypher Compiler 2.0 (neo4j-cypher-compiler-2.0), version: 2.0.4; revision: 2.0.4:2.0-maint:130/4a7d10bc274a5d26a180bbe9df25100e8a694748
+2015-04-28 03:43:18.993+0000 INFO  [org.neo4j]:   Neo4j - Graph Matching (neo4j-graph-matching), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:43:18.993+0000 INFO  [org.neo4j]:   Neo4j - JMX support (neo4j-jmx), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:43:18.993+0000 INFO  [org.neo4j]:   Neo4j - Cypher (neo4j-cypher), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:43:18.993+0000 INFO  [org.neo4j]:   Neo4j - Graph Algorithms (neo4j-graph-algo), version: 2.2.1; revision: 2.2.1:2.2:904/c23258e99edbfff137bea0d83af56c79a46bca31
+2015-04-28 03:43:18.993+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions END ---
+2015-04-28 03:43:18.993+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS START ---
+2015-04-28 03:43:18.993+0000 INFO  [org.neo4j]: Store versions:
+    Store versions:
+      NeoStore v0.A.5
+      SchemaStore v0.A.5
+      NodeStore v0.A.5
+      RelationshipStore v0.A.5
+      RelationshipTypeStore v0.A.5
+      LabelTokenStore v0.A.5
+      PropertyStore v0.A.5
+      PropertyIndexStore v0.A.5
+      StringPropertyStore v0.A.5
+      ArrayPropertyStore v0.A.5
+      RelationshipGroupStore v0.A.5
+2015-04-28 03:43:18.993+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS END ---
+2015-04-28 03:43:18.993+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE START ---
+2015-04-28 03:43:18.994+0000 INFO  [org.neo4j]: Id usage:
+    Id usage:
+      SchemaStore: used=1 high=0
+      NodeStore: used=4 high=3
+      RelationshipStore: used=0 high=-1
+      RelationshipTypeStore: used=0 high=-1
+      LabelTokenStore: used=0 high=-1
+      PropertyStore: used=4 high=3
+      PropertyIndexStore: used=1 high=0
+      StringPropertyStore: used=1 high=0
+      ArrayPropertyStore: used=1 high=0
+      RelationshipGroupStore: used=1 high=0
+2015-04-28 03:43:18.994+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE END ---
+2015-04-28 03:43:18.994+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles START ---
+2015-04-28 03:43:18.995+0000 INFO  [org.neo4j]: Disk space on partition (Total / Free / Free %): 255744888832 / 60976054272 / 23
+Storage files: (filename : modification date - size)
+      index:
+      - Total: 2015-04-27T22:39:22-0500 - 0.00 B
+      lock: 2015-04-27T22:43:18-0500 - 0.00 B
+      messages.log: 2015-04-27T22:43:18-0500 - 121.77 kB
+      neostore: 2015-04-27T22:43:18-0500 - 99.00 B
+      neostore.counts.db.a: 2015-04-27T22:43:17-0500 - 146.00 B
+      neostore.counts.db.b: 2015-04-27T22:41:24-0500 - 146.00 B
+      neostore.id: 2015-04-27T22:43:18-0500 - 9.00 B
+      neostore.labeltokenstore.db: 2015-04-27T22:43:18-0500 - 0.00 B
+      neostore.labeltokenstore.db.id: 2015-04-27T22:43:18-0500 - 9.00 B
+      neostore.labeltokenstore.db.names: 2015-04-27T22:43:18-0500 - 38.00 B
+      neostore.labeltokenstore.db.names.id: 2015-04-27T22:43:18-0500 - 9.00 B
+      neostore.nodestore.db: 2015-04-27T22:43:18-0500 - 60.00 B
+      neostore.nodestore.db.id: 2015-04-27T22:43:18-0500 - 9.00 B
+      neostore.nodestore.db.labels: 2015-04-27T22:43:18-0500 - 68.00 B
+      neostore.nodestore.db.labels.id: 2015-04-27T22:43:18-0500 - 9.00 B
+      neostore.propertystore.db: 2015-04-27T22:43:18-0500 - 164.00 B
+      neostore.propertystore.db.arrays: 2015-04-27T22:43:18-0500 - 128.00 B
+      neostore.propertystore.db.arrays.id: 2015-04-27T22:43:18-0500 - 9.00 B
+      neostore.propertystore.db.id: 2015-04-27T22:43:18-0500 - 9.00 B
+      neostore.propertystore.db.index: 2015-04-27T22:43:18-0500 - 9.00 B
+      neostore.propertystore.db.index.id: 2015-04-27T22:43:18-0500 - 9.00 B
+      neostore.propertystore.db.index.keys: 2015-04-27T22:43:18-0500 - 76.00 B
+      neostore.propertystore.db.index.keys.id: 2015-04-27T22:43:18-0500 - 9.00 B
+      neostore.propertystore.db.strings: 2015-04-27T22:43:18-0500 - 128.00 B
+      neostore.propertystore.db.strings.id: 2015-04-27T22:43:18-0500 - 9.00 B
+      neostore.relationshipgroupstore.db: 2015-04-27T22:43:18-0500 - 25.00 B
+      neostore.relationshipgroupstore.db.id: 2015-04-27T22:43:18-0500 - 9.00 B
+      neostore.relationshipstore.db: 2015-04-27T22:43:18-0500 - 0.00 B
+      neostore.relationshipstore.db.id: 2015-04-27T22:43:18-0500 - 9.00 B
+      neostore.relationshiptypestore.db: 2015-04-27T22:43:18-0500 - 0.00 B
+      neostore.relationshiptypestore.db.id: 2015-04-27T22:43:18-0500 - 9.00 B
+      neostore.relationshiptypestore.db.names: 2015-04-27T22:43:18-0500 - 38.00 B
+      neostore.relationshiptypestore.db.names.id: 2015-04-27T22:43:18-0500 - 9.00 B
+      neostore.schemastore.db: 2015-04-27T22:43:18-0500 - 64.00 B
+      neostore.schemastore.db.id: 2015-04-27T22:43:18-0500 - 9.00 B
+      neostore.transaction.db.0: 2015-04-27T22:39:24-0500 - 330.00 B
+      neostore.transaction.db.1: 2015-04-27T22:40:58-0500 - 225.00 B
+      neostore.transaction.db.2: 2015-04-27T22:41:23-0500 - 225.00 B
+      neostore.transaction.db.3: 2015-04-27T22:43:17-0500 - 225.00 B
+      neostore.transaction.db.4: 2015-04-27T22:43:18-0500 - 16.00 B
+      schema:
+        label:
+          lucene:
+            segments.gen: 2015-04-27T22:39:24-0500 - 20.00 B
+            segments_1: 2015-04-27T22:39:24-0500 - 32.00 B
+            write.lock: 2015-04-27T22:43:18-0500 - 0.00 B
+          - Total: 2015-04-27T22:43:18-0500 - 52.00 B
+        - Total: 2015-04-27T22:39:23-0500 - 52.00 B
+      - Total: 2015-04-27T22:39:23-0500 - 52.00 B
+      store_lock: 2015-04-27T22:39:22-0500 - 0.00 B
+2015-04-28 03:43:19.002+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles END ---
+2015-04-28 03:43:19.003+0000 INFO  [org.neo4j]: Database is now ready
+2015-04-28 03:43:19.031+0000 INFO  [org.neo4j]: Shutdown started
+2015-04-28 03:43:19.031+0000 INFO  [org.neo4j]: Database is now unavailable
+2015-04-28 03:43:19.031+0000 INFO  [org.neo4j]: About to rotate counts store at transaction 7 to [db\data\neostore.counts.db.b], from [db\data\neostore.counts.db.a].
+2015-04-28 03:43:19.034+0000 INFO  [org.neo4j]: Successfully rotated counts store at transaction 7 to [db\data\neostore.counts.db.b], from [db\data\neostore.counts.db.a].
+2015-04-28 03:43:19.464+0000 INFO  [org.neo4j]: NeoStore closed
+2015-04-28 03:43:19.464+0000 INFO  [org.neo4j]: --- STOPPING diagnostics START ---
+2015-04-28 03:43:19.465+0000 INFO  [org.neo4j]: --- STOPPING diagnostics END ---
