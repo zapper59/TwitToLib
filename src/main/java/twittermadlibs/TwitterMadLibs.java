@@ -113,8 +113,8 @@ public class TwitterMadLibs {
 			String s = words.randomProperPluralNoun();
 			rand = rand.replaceFirst("<proper plural noun>c", "<b>"+s.substring(0, 1).toUpperCase() + s.substring(1)+"</b>");
 		}
-		
-		
+
+
 		while (rand.contains("<noun>")) {
 			rand = rand.replaceFirst("<noun>", "<b>"+words.randomNoun()+"</b>");
 		}
@@ -148,41 +148,5 @@ public class TwitterMadLibs {
 		}
 		System.out.println("Request Complete: "+ ans);
 		return ans;
-	}
-
-	public static void addStringToSet(String s, String t, int weightM, WordSet words) {
-		ArrayList<Word> addList = null;
-		if (t.equals("RB") || t.equals("RBR") || t.equals("RBS")) {
-			addList = words.adverbs;
-		} else if (t.equals("NN")) {
-			addList = words.nouns;
-		} else if (t.equals("NNS")) {
-			addList = words.pluralNouns;
-		} else if (t.equals("VB") || t.equals("VBG")) {
-			addList = words.verbs;
-		} else if (t.equals("VBD") || t.equals("VBN")) {
-			addList = words.pastVerbs;
-		} else if (t.equals("JJ") || t.equals("JJR") || t.equals("JJS")) {
-			addList = words.adjectives;
-		} else if (t.equals("CD")) {
-			addList = words.numbers;
-		} else if (t.equals("NNP")) {
-			addList = words.properNouns;
-			addStringToSet(s, "NN", weightM, words);
-		} else if (t.equals("NNPS")) {
-			addList = words.properPluralNouns;
-			addStringToSet(s, "NNS", weightM, words);
-		}
-		if (addList != null) {
-			if (addList.contains(new Word(s, weightM))) {
-				for (Word w : addList) {
-					if (w.word.equals(s))
-						w.add(weightM);
-				}
-			} else {
-				addList.add(new Word(s, weightM));
-			}
-
-		}
 	}
 }

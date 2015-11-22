@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.TreeSet;
 
+import edu.stanford.nlp.io.EncodingPrintWriter.out;
+
 /**
  *
  * @author justi
@@ -63,7 +65,7 @@ public class WordSet {
 		for (Word w : words.adjectives) {
 			counts[5] += w.weight;
 		}
-		
+
 		Collections.sort(words.properNouns);
 		for (Word w : words.properNouns) {
 			counts[7] += w.weight;
@@ -76,7 +78,7 @@ public class WordSet {
 	}
 
 	public synchronized String randomNoun() {
-		if (counts[0] == 0)
+		if (counts[0] == 0||nouns.size()==0)
 			return "random noun";
 		int randomInt = (int) (Math.random() * (counts[0]));
 		int i = 0;
@@ -85,11 +87,11 @@ public class WordSet {
 			i++;
 			randomInt -= nouns.get(i).weight;
 		}
-		return nouns.get(Math.min(i,nouns.size()-1)).word;
+		return nouns.get(Math.min(i,Math.max(0, nouns.size()-1))).word;
 	}
 
 	public synchronized String randomPluralNoun() {
-		if (counts[1] == 0)
+		if (counts[1] == 0||pluralNouns.size()==0)
 			return "plural noun";
 		int randomInt = (int) (Math.random() * (counts[1]));
 		int i = 0;
@@ -98,11 +100,11 @@ public class WordSet {
 			i++;
 			randomInt -= pluralNouns.get(i).weight;
 		}
-		return pluralNouns.get(Math.min(i,pluralNouns.size()-1)).word;
+		return pluralNouns.get(Math.min(i,Math.max(0, pluralNouns.size()-1))).word;
 	}
 
 	public synchronized String randomVerb() {
-		if (counts[2] == 0)
+		if (counts[2] == 0||verbs.size()==0)
 			return "";
 		int randomInt = (int) (Math.random() * (counts[2]));
 		int i = 0;
@@ -111,11 +113,11 @@ public class WordSet {
 			i++;
 			randomInt -= verbs.get(i).weight;
 		}
-		return verbs.get(Math.min(i,verbs.size()-1)).word;
+		return verbs.get(Math.min(i,Math.max(0, verbs.size()-1))).word;
 	}
 
 	public synchronized String randomPastVerb() {
-		if (counts[3] == 0)
+		if (counts[3] == 0||pastVerbs.size()==0)
 			return "";
 		int randomInt = (int) (Math.random() * (counts[3]));
 		int i = 0;
@@ -124,11 +126,14 @@ public class WordSet {
 			i++;
 			randomInt -= pastVerbs.get(i).weight;
 		}
-		return pastVerbs.get(Math.min(i,pastVerbs.size()-1)).word;
+		return pastVerbs.get(Math.min(i,Math.max(0, pastVerbs.size()-1))).word;
 	}
 
 	public synchronized String randomAdverb() {
-		if (counts[4] == 0)
+		System.out.println(adverbs);
+		System.out.println(adverbs.size());
+		System.out.println(counts[4]);
+		if (counts[4] == 0||adverbs.size()==0)
 			return "";
 		int randomInt = (int) (Math.random() * (counts[4]));
 		int i = 0;
@@ -137,11 +142,11 @@ public class WordSet {
 			i++;
 			randomInt -= adverbs.get(i).weight;
 		}
-		return pluralNouns.get(Math.min(i,pluralNouns.size()-1)).word;
+		return adverbs.get(Math.min(i,Math.max(0, adverbs.size()-1))).word;
 	}
 
 	public synchronized String randomAdjective() {
-		if (counts[5] == 0)
+		if (counts[5] == 0||adjectives.size()==0)
 			return "";
 		int randomInt = (int) (Math.random() * (counts[5]));
 		int i = 0;
@@ -150,11 +155,11 @@ public class WordSet {
 			i++;
 			randomInt -= adjectives.get(i).weight;
 		}
-		return adjectives.get(Math.min(i,adjectives.size()-1)).word;
+		return adjectives.get(Math.min(i,Math.max(0, adjectives.size()-1))).word;
 	}
 
 	public synchronized String randomNumber() {
-		if (counts[6] == 0)
+		if (counts[6] == 0||numbers.size()==0)
 			return "";
 		int randomInt = (int) (Math.random() * (counts[6]));
 		int i = 0;
@@ -163,12 +168,12 @@ public class WordSet {
 			i++;
 			randomInt -= numbers.get(i).weight;
 		}
-		return numbers.get(Math.min(i,numbers.size()-1)).word;
+		return numbers.get(Math.min(i,Math.max(0, numbers.size()-1))).word;
 	}
 
-	
+
 	public synchronized String randomProperNoun() {
-		if (counts[7] == 0)
+		if (counts[7] == 0||properNouns.size()==0)
 			return "";
 		int randomInt = (int) (Math.random() * (counts[7]));
 		int i = 0;
@@ -177,11 +182,11 @@ public class WordSet {
 			i++;
 			randomInt -= properNouns.get(i).weight;
 		}
-		return properNouns.get(Math.min(i,properNouns.size()-1)).word;
+		return properNouns.get(Math.min(i,Math.max(0, properNouns.size()-1))).word;
 	}
 
 	public synchronized String randomProperPluralNoun() {
-		if (counts[8] == 0)
+		if (counts[8] == 0||properPluralNouns.size()==0)
 			return "";
 		int randomInt = (int) (Math.random() * (counts[8]));
 		int i = 0;
@@ -190,7 +195,7 @@ public class WordSet {
 			i++;
 			randomInt -= numbers.get(i).weight;
 		}
-		return properPluralNouns.get(Math.min(i,properPluralNouns.size()-1)).word;
+		return properPluralNouns.get(Math.min(i,Math.max(0, properPluralNouns.size()-1))).word;
 	}
 
 	public synchronized void addStringToSet(String s, String t, int weightM) {
