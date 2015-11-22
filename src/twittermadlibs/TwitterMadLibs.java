@@ -62,6 +62,12 @@ public class TwitterMadLibs {
 		while (rand.contains("<number>")) {
 			rand = rand.replaceFirst("<number>", "<b>"+words.randomNumber()+"</b>");
 		}
+		while (rand.contains("<proper noun>")) {
+			rand = rand.replaceFirst("<proper noun>", "<b>"+words.randomProperNoun()+"</b>");
+		}
+		while (rand.contains("<proper plural noun>")) {
+			rand = rand.replaceFirst("<proper plural noun>", "<b>"+words.randomProperPluralNoun()+"</b>");
+		}
 		String ans="";
 		for(String a:rand.split("\n")){
 			ans+="<p>"+a+"</p>";
@@ -74,9 +80,9 @@ public class TwitterMadLibs {
 		ArrayList<Word> addList = null;
 		if (t.equals("RB") || t.equals("RBR") || t.equals("RBS")) {
 			addList = words.adverbs;
-		} else if (t.equals("NN") || t.equals("NNP")) {
+		} else if (t.equals("NN")) {
 			addList = words.nouns;
-		} else if (t.equals("NNS") || t.equals("NNPS")) {
+		} else if (t.equals("NNS")) {
 			addList = words.pluralNouns;
 		} else if (t.equals("VB") || t.equals("VBG")) {
 			addList = words.verbs;
@@ -86,6 +92,12 @@ public class TwitterMadLibs {
 			addList = words.adjectives;
 		} else if (t.equals("CD")) {
 			addList = words.numbers;
+		} else if (t.equals("NNP")) {
+			addList = words.properNouns;
+			addStringToSet(s, "NN", weightM, words);
+		} else if (t.equals("NNPS")) {
+			addList = words.properPluralNouns;
+			addStringToSet(s, "NNS", weightM, words);
 		}
 		if (addList != null) {
 			if (addList.contains(new Word(s, weightM))) {

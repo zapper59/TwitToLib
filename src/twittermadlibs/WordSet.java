@@ -14,7 +14,7 @@ import java.util.TreeSet;
  * @author justi
  */
 public class WordSet {
-	int[] counts = new int[7];
+	int[] counts = new int[9];
 	public ArrayList<Word> nouns = new ArrayList<Word>();
 	public ArrayList<Word> pluralNouns = new ArrayList<Word>();
 	public ArrayList<Word> verbs = new ArrayList<Word>();
@@ -22,6 +22,8 @@ public class WordSet {
 	public ArrayList<Word> adverbs = new ArrayList<Word>();
 	public ArrayList<Word> adjectives = new ArrayList<Word>();
 	public ArrayList<Word> numbers = new ArrayList<Word>();
+	public ArrayList<Word> properNouns = new ArrayList<Word>();
+	public ArrayList<Word> properPluralNouns = new ArrayList<Word>();
 	public WordSet words;
 	public WordSet(){
 		words=this;
@@ -60,6 +62,16 @@ public class WordSet {
 		Collections.sort(words.adjectives);
 		for (Word w : words.adjectives) {
 			counts[5] += w.weight;
+		}
+		
+		Collections.sort(words.properNouns);
+		for (Word w : words.properNouns) {
+			counts[7] += w.weight;
+		}
+
+		Collections.sort(words.properPluralNouns);
+		for (Word w : words.properPluralNouns) {
+			counts[8] += w.weight;
 		}
 	}
 
@@ -152,5 +164,31 @@ public class WordSet {
 			randomInt -= numbers.get(i).weight;
 		}
 		return numbers.get(Math.min(i,numbers.size()-1)).word;
+	}
+	
+	public String randomProperNoun() {
+		if (counts[7] == 0)
+			return "";
+		int randomInt = (int) (Math.random() * (counts[7]));
+		int i = 0;
+		randomInt -= properNouns.get(i).weight;
+		while (i<properNouns.size()-1&&randomInt >= 0) {
+			i++;
+			randomInt -= properNouns.get(i).weight;
+		}
+		return properNouns.get(Math.min(i,properNouns.size()-1)).word;
+	}
+
+	public String randomProperPluralNoun() {
+		if (counts[8] == 0)
+			return "";
+		int randomInt = (int) (Math.random() * (counts[8]));
+		int i = 0;
+		randomInt -= properPluralNouns.get(i).weight;
+		while (i<properPluralNouns.size()-1&&randomInt >= 0) {
+			i++;
+			randomInt -= numbers.get(i).weight;
+		}
+		return properPluralNouns.get(Math.min(i,properPluralNouns.size()-1)).word;
 	}
 }
