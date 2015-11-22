@@ -1,5 +1,9 @@
 var SERVER_URL = "http://127.0.0.1:8000/receiveData";
-
+function search(ele){
+  if(event.keyCode==13){
+    processRequest();
+  }
+}
 function processRequest(){
 	$("#output").html("Working....");
   var username = document.getElementById("user").value;
