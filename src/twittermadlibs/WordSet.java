@@ -191,6 +191,7 @@ public class WordSet {
 			randomInt -= numbers.get(i).weight;
 		}
 		return properPluralNouns.get(Math.min(i,properPluralNouns.size()-1)).word;
+	}
 
 	public synchronized void addStringToSet(String s, String t, int weightM) {
 		WordSet words = this;
