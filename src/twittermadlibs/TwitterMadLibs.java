@@ -77,6 +77,44 @@ public class TwitterMadLibs {
 		words.sortAndCountSets();
 
 		String rand = LibsList.randomLib();
+		while (rand.contains("<noun>c")) {
+			String s = words.randomNoun();
+			rand = rand.replaceFirst("<noun>c", "<b>"+s.substring(0, 1).toUpperCase() + s.substring(1)+"</b>");
+		}
+		while (rand.contains("<plural noun>c")) {
+			String s = words.randomPluralNoun();
+			rand = rand.replaceFirst("<plural noun>c", "<b>"+s.substring(0, 1).toUpperCase() + s.substring(1)+"</b>");
+		}
+		while (rand.contains("<verb>c")) {
+			String s = words.randomVerb();
+			rand = rand.replaceFirst("<verb>c", "<b>"+s.substring(0, 1).toUpperCase() + s.substring(1)+"</b>");
+		}
+		while (rand.contains("<past verb>c")) {
+			String s = words.randomPastVerb();
+			rand = rand.replaceFirst("<past verb>c", "<b>"+s.substring(0, 1).toUpperCase() + s.substring(1)+"</b>");
+		}
+		while (rand.contains("<adverb>c")) {
+			String s = words.randomAdverb();
+			rand = rand.replaceFirst("<adverb>c", "<b>"+s.substring(0, 1).toUpperCase() + s.substring(1)+"</b>");
+		}
+		while (rand.contains("<adjective>c")) {
+			String s = words.randomAdjective();
+			rand = rand.replaceFirst("<adjective>c", "<b>"+s.substring(0, 1).toUpperCase() + s.substring(1)+"</b>");
+		}
+		while (rand.contains("<number>c")) {
+			String s = words.randomNumber();
+			rand = rand.replaceFirst("<number>c", "<b>"+s.substring(0, 1).toUpperCase() + s.substring(1)+"</b>");
+		}
+		while (rand.contains("<proper noun>c")) {
+			String s = words.randomProperNoun();
+			rand = rand.replaceFirst("<proper noun>c", "<b>"+s.substring(0, 1).toUpperCase() + s.substring(1)+"</b>");
+		}
+		while (rand.contains("<proper plural noun>c")) {
+			String s = words.randomProperPluralNoun();
+			rand = rand.replaceFirst("<proper plural noun>c", "<b>"+s.substring(0, 1).toUpperCase() + s.substring(1)+"</b>");
+		}
+		
+		
 		while (rand.contains("<noun>")) {
 			rand = rand.replaceFirst("<noun>", "<b>"+words.randomNoun()+"</b>");
 		}

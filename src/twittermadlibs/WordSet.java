@@ -198,9 +198,9 @@ public class WordSet {
 		ArrayList<Word> addList = null;
 		if (t.equals("RB") || t.equals("RBR") || t.equals("RBS")) {
 			addList = words.adverbs;
-		} else if (t.equals("NN") || t.equals("NNP")) {
+		} else if (t.equals("NN")) {
 			addList = words.nouns;
-		} else if (t.equals("NNS") || t.equals("NNPS")) {
+		} else if (t.equals("NNS")) {
 			addList = words.pluralNouns;
 		} else if (t.equals("VB") || t.equals("VBG")) {
 			addList = words.verbs;
@@ -210,6 +210,10 @@ public class WordSet {
 			addList = words.adjectives;
 		} else if (t.equals("CD")) {
 			addList = words.numbers;
+		}else if (t.equals("NNP")) {
+			addList = words.properNouns;
+		} else if (t.equals("NNPS")) {
+			addList = words.properPluralNouns;
 		}
 		if (addList != null) {
 			if (addList.contains(new Word(s, weightM))) {
