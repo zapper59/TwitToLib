@@ -1,0 +1,113 @@
+/*Link to google, and load to my webpage*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600italic,600,300italic,400italic,700italic,800,800italic);
+/*Another one*/
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,900,800,700,600,500,300,200);
+/*Icons pack from ionicons*/
+@import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+@import url(https://fonts.googleapis.com/css?family=PT+Serif:700italic,400italic);
+body{
+  background: #4099FF;
+}
+
+.box{
+  margin: 10px auto;
+  margin-left: 150px;
+  min-width: 400px;
+  height: 40px;
+}
+
+
+.textField{
+  font-family: 'PT Serif', serif;
+  font-size: 26px;
+  padding: 10px;
+  opacity: 0.9;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 180px;
+  margin-left: 100px;
+
+  border-radius: 10px;
+  background: #EEEEEE;
+
+
+
+}
+
+.photo{
+  max-width: 200px;
+  margin-left: 550px;
+}
+
+.container-1{
+  min-width: 300px;
+  vertical-align: middle;
+  white-space: nowrap;
+   /*This is set specifically so that the icon can be placed on top of the input as you’ll see shortly.*/
+  position: relative;
+
+}
+
+.container-1 input#search{
+  min-width: 300px;
+  height: 50px;
+  background: #4099FF;
+  border: none;
+
+  font-size: 30pt;
+  float: left;
+  color: #black;
+  padding-left: 45px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 1px;
+
+  -webkit-transition: background .55s ease;
+  -moz-transition: background .55s ease;
+  -ms-transition: background .55s ease;
+  -o-transition: background .55s ease;
+  transition: background .55s ease;
+}
+
+.container-1 input#search:focus, .container-1 input#search:active{
+    outline:none;
+}
+.fa:active,.fa-search:active{
+    color: #CF5300;
+}
+.container-1:hover .icon{
+  margin-top: 16px;
+  color: #black;
+
+  -webkit-transform:scale(1.5); /* Safari and Chrome */
+  -moz-transform:scale(1.5); /* Firefox */
+  -ms-transform:scale(1.5); /* IE 9 */
+  -o-transform:scale(1.5); /* Opera */
+   transform:scale(1.5);
+  }
+
+.container-1 .icon{
+  position: absolute;
+  top: 50%;
+  margin-left: 17px;
+  margin-top: 17px;
+  z-index: 1;
+  color: #4f5b66;
+}
+
+.container-1 input#search::-webkit-input-placeholder {
+  color: #65737e;
+}
+
+.container-1 input#search:-moz-placeholder { /* Firefox 18- */
+  color: #65737e;
+}
+
+.container-1 input#search::-moz-placeholder {  /* Firefox 19+ */
+  color: #65737e;
+}
+
+.container-1 input#search:-ms-input-placeholder {
+  color: #65737e;
+}
