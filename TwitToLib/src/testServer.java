@@ -23,6 +23,7 @@ public class testServer {
 		server.createContext("/receiveData", new MyDataHandler());
 		server.setExecutor(Executors.newCachedThreadPool());
 		server.start();
+		out.println("Server started");
 	}
 
 }
@@ -37,7 +38,10 @@ class MyDataHandler implements HttpHandler {
 		out.print(data);
 		String ans = getAns(data);
 		t.getResponseHeaders().add("Access-Control-Allow-Origin","null"); //Important Line, or failed
-		t.sendResponseHeaders(200,ans.getBytes().length); //Important line
+		if(ans==null)
+			t.sendResponseHeaders(500,0);
+		else
+			t.sendResponseHeaders(200,ans.getBytes().length); //Important line
 		OutputStream os = t.getResponseBody();
 		os.write(ans.getBytes());
 		os.close();
@@ -48,13 +52,14 @@ class MyDataHandler implements HttpHandler {
 	}
 	public static String getAns(String a){
 		Map<String, Integer> map=null;
+		String ans=null;
 		try {
 			map = TwitterHandler.find(a);
-		} catch (TwitterException e) {
+			ans = TwitterMadLibs.twitTheLibs(map);
+		} catch (Exception e) {
 			e.printStackTrace();
+			return null;
 		}
-
-		String ans = TwitterMadLibs.twitTheLibs(map);
 		return ans;
 	}
 }

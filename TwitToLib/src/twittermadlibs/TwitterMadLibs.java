@@ -65,6 +65,7 @@ public class TwitterMadLibs {
 		for(String a:rand.split("\n")){
 			ans+="<p>"+a+"</p>";
 		}
+		System.out.println("Request Complete: "+ ans);
 		return ans;
 	}
 

@@ -11,9 +11,10 @@ function processRequest(){
         dataType:"text",
         success: function(data){
           $("#output").html(data);
-          console.log(data);
+          console.log("Success! "+data);
         },
         error:function(xhr,err,msg){
+          $("#output").html("Oh no!!! You broke it!!");
           console.log("Failed POST Query");
           console.log(xhr);
           console.log(err);
