@@ -97,8 +97,10 @@ public class WordSet {
             return "";
         int randomInt = (int)(Math.random() * (counts[0]));
         int i = 0;
-        for(; randomInt > 0; i++)
+        randomInt -= nouns.get(i).weight;
+        while(randomInt >= 0)
         {
+            i++;
             randomInt -= nouns.get(i).weight;
         }
         return nouns.get(i).word;
@@ -110,8 +112,10 @@ public class WordSet {
             return "";
         int randomInt = (int)(Math.random() * (counts[1]));
         int i = 0;
-        for(; randomInt > 0; i++)
+        randomInt -= pluralNouns.get(i).weight;
+        while(randomInt >= 0)
         {
+            i++;
             randomInt -= pluralNouns.get(i).weight;
         }
         return pluralNouns.get(i).word;
@@ -123,8 +127,10 @@ public class WordSet {
             return "";
         int randomInt = (int)(Math.random() * (counts[2]));
         int i = 0;
-        for(; randomInt > 0; i++)
+        randomInt -= verbs.get(i).weight;
+        while(randomInt >= 0)
         {
+            i++;
             randomInt -= verbs.get(i).weight;
         }
         return verbs.get(i).word;
@@ -136,8 +142,10 @@ public class WordSet {
             return "";
         int randomInt = (int)(Math.random() * (counts[3]));
         int i = 0;
-        for(; randomInt > 0; i++)
+        randomInt -= pastVerbs.get(i).weight;
+        while(randomInt >= 0)
         {
+            i++;
             randomInt -= pastVerbs.get(i).weight;
         }
         return pastVerbs.get(i).word;
@@ -149,11 +157,13 @@ public class WordSet {
             return "";
         int randomInt = (int)(Math.random() * (counts[4]));
         int i = 0;
-        for(; randomInt > 0; i++)
+        randomInt -= adverbs.get(i).weight;
+        while(randomInt >= 0)
         {
+            i++;
             randomInt -= adverbs.get(i).weight;
         }
-        return adverbs.get(i).word;
+        return pluralNouns.get(i).word;
     }
     
     public String randomAdjective()
@@ -162,8 +172,10 @@ public class WordSet {
             return "";
         int randomInt = (int)(Math.random() * (counts[5]));
         int i = 0;
-        for(; randomInt > 0; i++)
+        randomInt -= adjectives.get(i).weight;
+        while(randomInt >= 0)
         {
+            i++;
             randomInt -= adjectives.get(i).weight;
         }
         return adjectives.get(i).word;
@@ -175,8 +187,10 @@ public class WordSet {
             return "";
         int randomInt = (int)(Math.random() * (counts[6]));
         int i = 0;
-        for(; randomInt > 0; i++)
+        randomInt -= numbers.get(i).weight;
+        while(randomInt >= 0)
         {
+            i++;
             randomInt -= numbers.get(i).weight;
         }
         return numbers.get(i).word;
