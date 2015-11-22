@@ -1,18 +1,14 @@
 var SERVER_URL = "http://127.0.0.1:8000/receiveData";
 
 function processRequest(){
-
-  var getProjectNames = function(callback){
     $.ajax({
         type: "POST",
         url: SERVER_URL,
-        headers: {"Accept": "",
-             "Content-Type":""},
-        data: JSON.stringify(data),
+        data: "Hello World",
         cache: false,
         dataType:"text",
         success: function(data){
-          callback(data);
+          console.log(data);
         },
         error:function(xhr,err,msg){
           console.log("Failed POST Query");
