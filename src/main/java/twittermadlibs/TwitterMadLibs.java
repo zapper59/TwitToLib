@@ -35,7 +35,6 @@ public class TwitterMadLibs {
 		public void run(){
 			List<List<HasWord>> sentences = MaxentTagger.tokenizeText(new StringReader(entry.getKey()));
 			out.print(".");
-			out.println(sentences);
 			for (List<HasWord> sentence : sentences) {
 				List<TaggedWord> tSentence = tagger.tagSentence(sentence);
 				String s = Sentence.listToString(tSentence, false);
@@ -47,7 +46,7 @@ public class TwitterMadLibs {
 				}
 			}
 			remaining[0]--;
-			out.println(remaining[0] + " " + entry.getKey());
+			out.println(remaining[0]);
 			if(remaining[0]==0){
 				synchronized(remaining){
 					remaining.notifyAll();
