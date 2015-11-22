@@ -6,11 +6,18 @@
 </head>
 <body>
 
-  <input type="text" name="username">
+  <input type="text" name="username" value="" id="user" onkeydown="search(this)">
   <input type="submit" value="Submit" onclick="processRequest()">
 
 
 </body>
+<script>
+function search(ele){
+  if(event.keyCode==13){
+    processRequest();
+  }
+}
+  </script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.47/jquery.form-validator.min.js"></script>
 <script src="js/bloodyScriptM8.js"></script>
 </html>

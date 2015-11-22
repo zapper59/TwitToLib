@@ -1,10 +1,11 @@
 var SERVER_URL = "http://127.0.0.1:8000/receiveData";
 
 function processRequest(){
+  var username = document.getElementById("user").value;
     $.ajax({
         type: "POST",
         url: SERVER_URL,
-        data: "Hello World",
+        data: username,
         cache: false,
         dataType:"text",
         success: function(data){
