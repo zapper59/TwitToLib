@@ -5,14 +5,15 @@
 /*Icons pack from ionicons*/
 @import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 
-@import url(https://fonts.googleapis.com/css?family=PT+Serif:700italic);
+@import url(https://fonts.googleapis.com/css?family=PT+Serif:700italic,400italic);
 body{
   background: #4099FF;
 }
 
 .box{
   margin: 10px auto;
-  width: 400px;
+  margin-left: 150px;
+  min-width: 400px;
   height: 40px;
 }
 
@@ -40,7 +41,7 @@ body{
 }
 
 .container-1{
-  width: 300px;
+  min-width: 300px;
   vertical-align: middle;
   white-space: nowrap;
    /*This is set specifically so that the icon can be placed on top of the input as you’ll see shortly.*/
@@ -49,7 +50,7 @@ body{
 }
 
 .container-1 input#search{
-  width: 300px;
+  min-width: 300px;
   height: 50px;
   background: #4099FF;
   border: none;
