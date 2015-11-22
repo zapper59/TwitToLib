@@ -1,0 +1,14 @@
+apply plugin: "eclipse"
+apply plugin: "application"
+
+mainClassName = "other.testServer"
+
+dependencies{
+	compile files("stanford-postagger.jar")
+	compile files("twitter4j-core-4.0.4.jar")
+	compile files("sun-httpserver.jar")
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '2.5'
+}
