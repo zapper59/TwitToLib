@@ -17,7 +17,7 @@ public class TwitterHandler {
 		out.println(result.getTweets().size());
 		for(Status s:result.getTweets()){
 			ans.put(s.getText(),s.getRetweetCount());
-			out.println(s.getText());
+//			out.println(s.getText());
 		}
 		out.println(ans);
 		return ans;

@@ -54,6 +54,7 @@ class MyDataHandler implements HttpHandler {
 		Map<String, Integer> map=null;
 		String ans=null;
 		try {
+
 			map = TwitterHandler.find(a);
 			ans = TwitterMadLibs.twitTheLibs(map);
 		} catch (Exception e) {
