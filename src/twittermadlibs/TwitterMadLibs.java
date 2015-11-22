@@ -17,15 +17,24 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Map;
 import java.util.TreeSet;
+
 import static java.lang.System.*;
 public class TwitterMadLibs {
-
-	public static String twitTheLibs(Map<String,Integer>args){
-		WordSet words = new WordSet();
-		MaxentTagger tagger = new MaxentTagger("english-bidirectional-distsim.tagger");
-
-		for(Map.Entry<String,Integer>entry:args.entrySet()){
+	static class TaggerRunner implements Runnable{
+		public MaxentTagger tagger;
+		public Map.Entry<String,Integer>entry;
+		public WordSet words;
+		public volatile int[]remaining;
+		public TaggerRunner(MaxentTagger tag, Map.Entry<String,Integer>e, WordSet w, int[]rem){
+			tagger=tag;
+			words=w;
+			entry=e;
+			remaining=rem;
+		}
+		@Override
+		public void run(){
 			List<List<HasWord>> sentences = MaxentTagger.tokenizeText(new StringReader(entry.getKey()));
+			out.print(".");
 			out.println(sentences);
 			for (List<HasWord> sentence : sentences) {
 				List<TaggedWord> tSentence = tagger.tagSentence(sentence);
@@ -33,10 +42,37 @@ public class TwitterMadLibs {
 				String[] wordList = s.split(" ");
 				for (String word : wordList) {
 					String[] part = word.split("/");
-					addStringToSet(part[0], part[1], entry.getValue()+1, words);
+					if(remaining[0]>0)
+						words.addStringToSet(part[0], part[1], entry.getValue()+1);
+				}
+			}
+			remaining[0]--;
+			out.println(remaining[0] + " " + entry.getKey());
+			if(remaining[0]==0){
+				synchronized(remaining){
+					remaining.notifyAll();
 				}
 			}
 		}
+	}
+	public static MaxentTagger tagger = new MaxentTagger("english-bidirectional-distsim.tagger");
+	public static String twitTheLibs(Map<String,Integer>args){
+		WordSet words = new WordSet();
+		if(args.size()==0)
+			return "No Tweets!";
+		int []running=new int[]{args.size()};
+		for(Map.Entry<String,Integer>entry:args.entrySet()){
+			new Thread(new TaggerRunner(tagger,entry,words,running)).start();;
+		}
+		synchronized(running){
+			try {
+				running.wait(5000);
+			} catch (InterruptedException e) {
+				out.println("timeout");
+				running[0]=-1;
+			}
+		}
+		out.println();
 		System.out.println("Sorting....");
 		words.sortAndCountSets();
 
