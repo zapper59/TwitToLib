@@ -39,7 +39,7 @@ class MyDataHandler implements HttpHandler {
 		String data = new Scanner(t.getRequestBody()).useDelimiter("\\A").next();
 		out.print(data);
 		String ans = getAns(data);
-		t.getResponseHeaders().add("Access-Control-Allow-Origin","null"); //Important Line, or failed
+		t.getResponseHeaders().add("Access-Control-Allow-Origin","*"); //Important Line, or failed
 		if(ans==null)
 			t.sendResponseHeaders(500,0);
 		else

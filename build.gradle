@@ -4,9 +4,9 @@ apply plugin: "application"
 mainClassName = "other.testServer"
 
 dependencies{
-	compile files("stanford-postagger.jar")
-	compile files("twitter4j-core-4.0.4.jar")
-	compile files("sun-httpserver.jar")
+	compile files("libs/stanford-postagger.jar")
+	compile files("libs/twitter4j-core-4.0.4.jar")
+	compile files("libs/sun-httpserver.jar")
 }
 
 task wrapper(type: Wrapper) {
