@@ -28,7 +28,10 @@ public class testServer {
 	}
 
 }
+/*
+ This handler will accept the request of Twitter username, and return result, perherps we don't really need flask do we?"
 
+*/
 class MyDataHandler implements HttpHandler {
 
 	@Override
