@@ -36,21 +36,23 @@ class MyDataHandler implements HttpHandler {
 
 	@Override
 	public void handle(HttpExchange t) throws IOException {
+		out.println("Request Recieved");
 		try{
-		out.println("");
-		String data = new Scanner(t.getRequestBody()).useDelimiter("\\A").next();
-		out.print(data);
-		String ans = getAns(data);
-		t.getResponseHeaders().add("Access-Control-Allow-Origin","*"); //Important Line, or failed
-		if(ans==null)
-			t.sendResponseHeaders(500,0);
-		else
-			t.sendResponseHeaders(200,ans.getBytes().length); //Important line
-		OutputStream os = t.getResponseBody();
-		os.write(ans.getBytes());
-		os.close();
-		}catch(Exception e){
+			out.println("");
+			String data = new Scanner(t.getRequestBody()).useDelimiter("\\A").next();
+			out.print(data);
+			String ans = getAns(data);
+			t.getResponseHeaders().add("Access-Control-Allow-Origin","*"); //Important Line, or failed
+			if(ans==null)
+				t.sendResponseHeaders(500,0);
+			else
+				t.sendResponseHeaders(200,ans.getBytes().length); //Important line
+			OutputStream os = t.getResponseBody();
+			os.write(ans.getBytes());
+			os.close();
+		}catch(Exception e){ 
 			e.printStackTrace();
+			t.sendResponseHeaders(500,0);
 		}
 
 	}

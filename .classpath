@@ -3,8 +3,8 @@
 	<classpathentry kind="output" path="bin"/>
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="src" path="src/main/resources"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER" exported="true"/>
-	<classpathentry kind="lib" path="C:/Users/Brian/workspace/workspace/TwitToLib/stanford-postagger.jar" exported="true"/>
-	<classpathentry kind="lib" path="C:/Users/Brian/workspace/workspace/TwitToLib/twitter4j-core-4.0.4.jar" exported="true"/>
-	<classpathentry kind="lib" path="C:/Users/Brian/workspace/workspace/TwitToLib/sun-httpserver.jar" exported="true"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/v/filer4b/v38q001/bririche/public_html/TwitToLib/libs/stanford-postagger.jar"/>
+	<classpathentry kind="lib" path="/v/filer4b/v38q001/bririche/public_html/TwitToLib/libs/twitter4j-core-4.0.4.jar"/>
+	<classpathentry kind="lib" path="/v/filer4b/v38q001/bririche/public_html/TwitToLib/libs/sun-httpserver.jar"/>
 </classpath>
