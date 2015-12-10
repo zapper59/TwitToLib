@@ -3,4 +3,4 @@ bin/
 *.class
 .gradle
 build/
-
+*.log
