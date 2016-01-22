@@ -6,4 +6,6 @@ It's a web application for predicting any given twitter users to fill in any Mad
 Backend was written in Java, and fully utilized the Stanford Natrual Language Process library
 http://nlp.stanford.edu/nlp/javadoc/javanlp/help-doc.html
 
+Frontend was completely scratched in HTML/CSS, and that was my greatest regret. 
+
 
